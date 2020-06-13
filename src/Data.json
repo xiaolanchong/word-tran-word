@@ -51,6 +51,21 @@
       ]
    },
    {
+      "Name" : "Harry Potter and Phil Stone(jpn)",
+      "Language": "ja",
+      "Rows" : [
+         ["章", "① chapter; section. ② medal."],
+         ["生き残る", "to survive."],
+         ["ダーズリー", "Dursley"],
+         ["プリベット", "Privet"],
+         ["夫妻", "man and wife; married couple."],
+         ["番地", "house number; address."],
+         ["とうてい", "(cannot) possibly; no matter how."],
+         ["自慢", "pride; boast."],
+         ["認める", "① to recognize; to recognise; to observe; to notice."]
+      ]
+   },
+   {
       "Name" : "TOPIK 1 существительные",
       "Language": "ko",
       "Rows" : [

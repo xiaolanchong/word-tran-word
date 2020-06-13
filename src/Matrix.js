@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Data from './Data.json';
+import React, { useState, useEffect } from "react";
+import { getDeck } from './User.js';
 import queryString from 'query-string';
 import Editable from "./Editable";
-import KoreanInput from "./KoreanInput";
+import VirtualKeyboardInput from "./VirtualKeyboardInput";
 
-function  InputEditable({ethalon, onChange=((text) => {}), language}) {
+function InputEditable({ethalon, onChange=((text) => {}), language}) {
    const [typedText, setTypedText] = useState("");
   /*
     Enclose the input element as the children to the Editable component to make it as inline editable.
@@ -15,7 +15,7 @@ function  InputEditable({ethalon, onChange=((text) => {}), language}) {
       placeholder="Ввести слово"
       type="input"
     >
-      <KoreanInput
+      <VirtualKeyboardInput
         name="typed_text"
         placeholder=''
         input_text={typedText}
@@ -55,6 +55,8 @@ const Mode = Object.freeze({
       TestL1Translation: 2,
       TestL2Translation: 3
    })
+   
+const tableStyle = "table table-striped  table-nonfluid border";
 
 function ShowBoth({rows}) {
    const rowElements = rows.map(
@@ -65,10 +67,10 @@ function ShowBoth({rows}) {
                      </tr>)
    );
    return (
-         <table className="table table-striped table-nonfluid mt-2 border">
+         <table className={tableStyle}>
             <thead className="thead-light">
                <tr>
-                  <th>Слово</th>
+                  <th style={{ width: '50%'}}>Слово</th>
                   <th>Перевод</th>
                </tr>
             </thead>
@@ -79,7 +81,7 @@ function ShowBoth({rows}) {
    );
 }
 
-function L1Controls({}) {
+function L1Controls() {
    const Step = Object.freeze({
          ShowOkFailed: 1,
          Ok: 2,
@@ -109,7 +111,7 @@ function TestL1Translation({rows}) {
    const L1Row = ({item}) => {
       return <tr>
                <td>{item[0]}</td>
-               <td>{isL2Shown? item[1] : ''}
+               <td>{isL2Shown? item[1] : '\u00A0'.repeat(item[1].length)}
                </td>
                <td className="p-0 align-middle text-center">
                   { isL2Shown ? <L1Controls /> : '' }
@@ -121,12 +123,12 @@ function TestL1Translation({rows}) {
       (item, index) => <L1Row item={item} key={index}/>
    );
    return (
-         <table className="table table-striped table-nonfluid mt-2 border ">
+         <table className={tableStyle}>
             <thead className="thead-light">
                <tr>
-                  <th>Слово</th>
-                  <th>Перевод</th>
-                  <th className="p-0 align-middle text-center">
+                  <th >Слово</th>
+                  <th >Перевод</th>
+                  <th style={{ width: '150px'}} className="p-0 align-middle text-center">
                      <button className={'btn btn-outline-info btn-sm ' + (isL2Shown ? 'disabled' : '')} onClick={()=> {showL2(true)}}>
                         Показать
                      </button>
@@ -148,11 +150,11 @@ function TestL2Translation({rows, language}) {
                                  key={index} />
    );
    return (
-         <table className="table table-striped table-nonfluid mt-2 border">
+         <table className={tableStyle}>
             <thead className="thead-light">
                <tr>
-                  <th>Перевод</th>
-                  <th>Слово</th>
+                  <th style={{ width: '45%'}}>Перевод</th>
+                  <th style={{ width: '45%'}}>Слово</th>
                   <th>Ок?</th>
                </tr>
             </thead>
@@ -175,62 +177,88 @@ function FragmentMode({rows, language, name}) {
    }
 
    return (
-      <div className="mt-3 ml-1">
-         <div className="btn-group btn-group-toggle" data-toggle="buttons">
-           <label className={"btn btn-secondary " + ((mode === Mode.ShowBoth)? 'active' : '')}>
-             <input type="radio" name="options" id="option1" autocomplete="off" checked={mode === Mode.ShowBoth}
-                    onClick={() => setMode(Mode.ShowBoth)} />
+      <div className="mt-3 ml-1 ">
+         <div className=''>
+          <div className="btn-group btn-group-toggle   " data-toggle="buttons">
+           <label className={"btn btn-sm btn-secondary " + ((mode === Mode.ShowBoth)? 'active' : '')}
+                  title='Слово и перевод'>
+             <input type="radio" name="options" id="option1" autoComplete="off" checked={mode === Mode.ShowBoth}
+                    onChange={() => setMode(Mode.ShowBoth)} />
              Сл+пер
            </label>
-           <label className={"btn btn-secondary " + ((mode === Mode.TestL1Translation)? 'active' : '')}>
-             <input type="radio" name="options" id="option2" autocomplete="off" checked={mode === Mode.TestL1Translation}
-                    onClick={() => setMode(Mode.TestL1Translation)} />
+           <label className={"btn btn-sm btn-secondary " + ((mode === Mode.TestL1Translation)? 'active' : '')}
+                  title='Слово в перевод'>
+             <input type="radio" name="options" id="option2" autoComplete="off" checked={mode === Mode.TestL1Translation}
+                    onChange={() => setMode(Mode.TestL1Translation)} />
              Сл→Пер
            </label>
-           <label className={"btn btn-secondary " + ((mode === Mode.TestL2Translation)? 'active' : '')}>
-             <input type="radio" name="options" id="option3" autocomplete="off" checked={mode === Mode.TestL2Translation}
-                    onClick={() => setMode(Mode.TestL2Translation)} />
+           <label className={"btn btn-sm btn-secondary " + ((mode === Mode.TestL2Translation)? 'active' : '')}
+                  title='Перевод в слово'>
+             <input type="radio" name="options" id="option3" autoComplete="off" checked={mode === Mode.TestL2Translation}
+                    onChange={() => setMode(Mode.TestL2Translation)} />
              Пер→Сл
            </label>
+           
+          </div>
          </div>
-         {modeTable}
+         <div className=''>
+            <div className=' '>
+               {modeTable}
+            </div>
+         </div>
       </div>
       );
 }
 
 function Matrix(props) {
-   const urlParams = queryString.parse(props.location.search)
+   const [deck, setDeck] = useState({rows:[], name: '', language: ''});
+   
+   useEffect(() => {
+      if(deck.name === ''){
+         deckGetter();
+      }
+   });
+   
+   const urlParams = queryString.parse(props.location.search);
    if (urlParams.id === undefined) {
       return null;
    }
-   
-   const index = urlParams.id;
-   const matrix = Data[index];
-   
+
+   const deckId = urlParams.id;
+   const deckGetter = async () => {
+      const deckD = await getDeck(deckId, 0, 100);
+      setDeck(deckD);
+   }
+
    const chunk_size = 5;
 
    let fragments = [];
-   for (let i=0, size = matrix.Rows.length; i < size; i += chunk_size) {
-      const temparray = matrix.Rows.slice(i, i + chunk_size);
+   for (let i=0, size = deck.rows.length; i < size; i += chunk_size) {
+      const temparray = deck.rows.slice(i, i + chunk_size);
       const fragmentData = { 
                      rows: temparray, 
                      name : '' + (i + 1) + '-' + (i + temparray.length),
-                     language : matrix.Language
+                     language : deck.language
                    };
       fragments.push(<FragmentMode key={i} {...fragmentData} />);
    }
    return (<div>
-              <h2 className="ml-3">{matrix.Name}</h2>
+              <h2 className="ml-3">{deck.name}</h2>
               <div className='m-1'>
                  <div>
-                    <KoreanInput/>
+                    <VirtualKeyboardInput/>
                  </div>
                  <div>
-                    <KoreanInput
+                    <VirtualKeyboardInput
                       placeholder=''
                       input_text=''
-                     //  onChange={text => { setTypedText(text); onChange(text);}}
                       language='ko' />
+                 </div>
+                 <div>
+                    <VirtualKeyboardInput
+                      placeholder=''
+                      input_text=''
+                      language='ja' />
                  </div>
               </div>
               <div>

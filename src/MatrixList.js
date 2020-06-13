@@ -1,19 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import Data from './Data.json';
+import {getDeckList} from './User.js';
 
 class MatrixList extends React.Component {
    constructor(props) {
       super(props);
-      this.matrices = Data;
+      this.state = { decks: [] };
+   }
+   
+   async componentDidMount() {
+      const decks = await getDeckList();
+      this.setState({ decks: decks })
    }
 
    render() {
-      const rows = this.matrices.map( (item, index) =>
+      const rows = this.state.decks.map( (deck, index) =>
          <tr key={index}>
-            <td><Link to={'/matrix?id=' + index}>{item.Name}</Link></td>
-            <td>{item.Language}</td>
-            <td>{item.Rows.length}</td>
+            <td><Link to={`/matrix?id=${deck.id}`}>{deck.name}</Link></td>
+            <td>{deck.language}</td>
+            <td>{deck.row_number}</td>
          </tr>
       );
       return (
