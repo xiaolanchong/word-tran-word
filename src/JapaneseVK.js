@@ -174,7 +174,7 @@ class Callback {
       const endWordIndex = Math.min((this.page_number + 1) * disp_number,
                                     this.word_lists[this.list_index].length);
       if(this.page_number > 0) {
-         const pageUp = $(`<button class="pageup">&#x2BC5;<span class="border rounded ml-1"><small>PgUp</small></span></button>`);
+         const pageUp = $(`<button class="pageup">&#x2BC5;<span class="border rounded ml-1"><kbd>PgUp</<kbd></span></button>`);
          pageUp.addClass('dropdown-item')
                .css('padding', '0.25rem 0.5rem');
          menu.append(pageUp);
@@ -193,7 +193,7 @@ class Callback {
          menu.append(link);
       }
       if((this.page_number + 1) * disp_number < this.word_lists[this.list_index].length) {
-         const pageDn = $(`<button class="pagedown">&#x2BC6;<span class="border rounded ml-1"><small>PgDn</small></span></button>`);
+         const pageDn = $(`<button class="pagedown">&#x2BC6;<span class="border rounded ml-1"><kbd>PgDn</<kbd></span></button>`);
          pageDn.addClass('dropdown-item')
                .css('padding', '0.25rem 0.5rem');
          menu.append(pageDn);

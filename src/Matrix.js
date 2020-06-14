@@ -27,61 +27,13 @@ function InputEditable({ethalon, onChange=((text) => {}), language}) {
   );
 }
 
-function RowL2 ({l1Word, l2Word, language}) {
-   const [isCorrect, setCorrect] = useState(false);
-   const onChangeText = (text) => {
-      if (text.length === 0) {
-         setCorrect(false);
-      } else {
-         setCorrect(l1Word === text);
-      }
-   }
-   const editable = <InputEditable 
-                        ethalon={l1Word} 
-                        onChange={onChangeText}
-                        language={language}
-                    />;
-   return  (<tr>
-               <td className=''>{l2Word}</td>
-               <td>
-                  {editable}
-               </td>
-               <td className='text-success'>{isCorrect ? '\u2713' : ''}</td>
-            </tr>)
-}
-
 const Mode = Object.freeze({
-      ShowBoth: 1,
-      TestL1Translation: 2,
-      TestL2Translation: 3
+      ShowWordAndTranslation: 1,
+      TestTranslation: 2,
+      TestWord: 3
    })
    
-const tableStyle = "table table-striped  table-nonfluid border";
-
-function ShowBoth({rows}) {
-   const rowElements = rows.map(
-                  (item, index) =>  
-                     (<tr key={index}>
-                           <td>{item[0]}</td>
-                           <td>{item[1]} </td>
-                     </tr>)
-   );
-   return (
-         <table className={tableStyle}>
-            <thead className="thead-light">
-               <tr>
-                  <th style={{ width: '50%'}}>Слово</th>
-                  <th>Перевод</th>
-               </tr>
-            </thead>
-            <tbody>
-               {rowElements}
-            </tbody>
-         </table>
-   );
-}
-
-function L1Controls() {
+function ConfirmTranslationControls() {
    const Step = Object.freeze({
          ShowOkFailed: 1,
          Ok: 2,
@@ -90,128 +42,193 @@ function L1Controls() {
    const [step, setStep] = useState(Step.ShowOkFailed);
    switch(step) {
       case Step.ShowOkFailed:
-         return <div>
-                  <button className='btn btn-success btn-sm ml-1' onClick={()=> {setStep(Step.Ok)}}>
+         return <React.Fragment>
+                  <button  className='d-table-cell ml-2 btn btn-success btn-sm ' onClick={()=> {setStep(Step.Ok)}}>
                      Помню
                   </button>
-                  <button className={'btn btn-danger btn-sm ml-1'} onClick={()=> {setStep(Step.Failed)}}>
-                     Забыл
+                  <button  className={'d-table-cell ml-2 btn btn-danger btn-sm mx-1'} onClick={()=> {setStep(Step.Failed)}}>
+                     Забыто
                   </button>
-                </div>
+                </React.Fragment>
       case Step.Ok:
-         return <div className="text-success">{'\u2713'}</div>
+         return <div className="text-success ml-2">{'\u2713'}</div>
       case Step.Failed:
-         return <div className="text-danger">{'\u2717'}</div>
+         return <div className="text-danger ml-2">{'\u2717'}</div>
       default:
          return null;
    }
 }
 
-function TestL1Translation({rows}) {
-   const L1Row = ({item}) => {
-      return <tr>
-               <td>{item[0]}</td>
-               <td>{isL2Shown? item[1] : '\u00A0'.repeat(item[1].length)}
-               </td>
-               <td className="p-0 align-middle text-center">
-                  { isL2Shown ? <L1Controls /> : '' }
-               </td>
-            </tr>
+
+function ShowBothMode({rows, modeControls, isFirst, isKanaMode}) {
+   isFirst = false;
+   const rowElements = rows.map(
+                  (item, index) => { 
+                     const wordToShow = isKanaMode && item.length >= 3 ? item[2] : item[0];
+                     if(index === 0) {
+                        return (<tr key={index} >
+                                    <td rowSpan={rows.length} >
+                                      {modeControls}
+                                    </td>
+                                    <td className={isFirst ? "" : ""}>{wordToShow}</td>
+                                    <td>{item[1]}</td>
+                                    <td/>
+                              </tr>)
+                     } else {
+                     return (<tr key={index}>
+                                 <td>{wordToShow}</td>
+                                 <td>{item[1]}</td>
+                                 <td/>
+                           </tr>)
+                     }
+                  });
+   return rowElements;
+}
+
+function TestTranslationMode({rows, modeControls, isFirst, isKanaMode}) {
+   const [isTranslationShown, showTranslation] = useState(false);
+
+   const TranslationCell = ({translation}) => {
+                              return (<td>{isTranslationShown
+                                       ? (<div className="d-table-row">
+                                             <div className="d-table-cell">{translation}</div> 
+                                             <ConfirmTranslationControls />
+                                          </div>)
+                                       : '\u00A0'.repeat(/*translation.length*/10)}
+                                 </td>)
+                           };
+   const buttonShow =  <button className={'btn btn-outline-info btn-sm mt-2 d-block '}
+                                 onClick={()=> {showTranslation(true)}} 
+                                 disabled={isTranslationShown}>
+                              Показать перевод
+                       </button>;
+   const rowElements = rows.map(
+                  (item, index) => { 
+                     const wordToShow = isKanaMode && item.length >= 3 ? item[2] : item[0];
+                     if(index === 0) {
+                        return (<tr key={index}>
+                                    <td rowSpan={rows.length}>{modeControls} {buttonShow}</td>
+                                    <td>{wordToShow}</td>
+                                    <TranslationCell translation={item[1]}/>
+                              </tr>)
+                     } else {
+                        return (<tr key={index}>
+                                  <td>{wordToShow}</td>
+                                  <TranslationCell translation={item[1]}/>
+                               </tr>);
+                     }
+                  });
+   return rowElements;
+}
+
+function RowToInputWord({modeControls, rowSpan, word, translation, language}) {
+   const [isCorrect, setCorrect] = useState(false);
+   const onChangeText = (text) => {
+      const correct = (text.length !== 0) && (word === text);
+      setCorrect(correct);
    };
-   const [isL2Shown, showL2] = useState(false);
-   const rowElements = rows.map(
-      (item, index) => <L1Row item={item} key={index}/>
-   );
-   return (
-         <table className={tableStyle}>
-            <thead className="thead-light">
-               <tr>
-                  <th >Слово</th>
-                  <th >Перевод</th>
-                  <th style={{ width: '150px'}} className="p-0 align-middle text-center">
-                     <button className={'btn btn-outline-info btn-sm ' + (isL2Shown ? 'disabled' : '')} onClick={()=> {showL2(true)}}>
-                        Показать
-                     </button>
-                  </th>
-               </tr>
-            </thead>
-            <tbody>
-               {rowElements}
-            </tbody>
-         </table>
-   );
+   const after = <div className='text-success float-right'>{isCorrect ? '\u2713' : ''}</div>;
+   const editable = <div className="float-left">
+                        <InputEditable 
+                           ethalon={word} 
+                           onChange={onChangeText}
+                           language={language}
+                        />
+                    </div>;
+   return  (<tr>
+               {modeControls ? (<td rowSpan={rowSpan}>{modeControls}</td>) : ''}
+               <td>
+                  {editable}
+                  {after}
+               </td>
+               <td className=''>{translation}</td>
+            </tr>);
 }
 
-function TestL2Translation({rows, language}) {
+function TestWordMode({rows, modeControls, language, isKanaMode}) {
    const rowElements = rows.map(
-         (item, index) => <RowL2 l1Word={item[0]} 
-                                 l2Word={item[1]} 
+         (item, index) => {
+            const wordToShow = isKanaMode && item.length >= 3 ? item[2] : item[0];
+            return <RowToInputWord word={wordToShow} 
+                                 translation={item[1]} 
                                  language={language}
+                                 modeControls={index === 0 ? modeControls : undefined}
+                                 rowSpan={rows.length}
                                  key={index} />
-   );
-   return (
-         <table className={tableStyle}>
-            <thead className="thead-light">
-               <tr>
-                  <th style={{ width: '45%'}}>Перевод</th>
-                  <th style={{ width: '45%'}}>Слово</th>
-                  <th>Ок?</th>
-               </tr>
-            </thead>
-            <tbody>
-               {rowElements}
-            </tbody>
-         </table>
-   );
+         });
+   return rowElements;
 }
 
-function FragmentMode({rows, language, name}) {
-   const [mode, setMode] = useState(Mode.TestL1Translation);
+function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode}) {
+   const [mode, setMode] = useState(Mode.TestTranslation);
 
+   const ModeButton = ({buttonMode, name, title, id}) => {
+             const style = isActive ? 'primary' : 'secondary';
+             return <label className={`btn btn-sm btn-outline-${style} ` + ((mode === buttonMode)? 'active' : '')}
+                        title={title}>
+                        <input type="radio" name={"option"+id} id={"option"+id}
+                        autoComplete="off" checked={mode === buttonMode}
+                        onChange={() => { onActivate(); setMode(buttonMode) }} />
+                        {name}
+                   </label>
+   };
+   const modeControls = (
+          <div className="btn-group-vertical btn-group-toggle p-0" data-toggle="buttons">
+            <ModeButton buttonMode={Mode.ShowWordAndTranslation} name="Слово и перевод"   title='Показать слово и перевод' id="0"/>
+            <ModeButton buttonMode={Mode.TestTranslation}        name="Проверить перевод" title='Проверить перевод' id="1"/>
+            <ModeButton buttonMode={Mode.TestWord}               name="Ввести слово"      title='Проверит слово' id="2"/>
+          </div>
+   );
    let modeTable = null;
+   const args = {
+      rows: rows,
+      modeControls: modeControls,
+      isFirst: isFirst,
+      language: language,
+      isKanaMode: isKanaMode
+   };
    switch(mode) {
-      case Mode.ShowBoth:          modeTable = <ShowBoth rows={rows} />; break;
-      case Mode.TestL1Translation: modeTable = <TestL1Translation rows={rows} />; break;
-      case Mode.TestL2Translation: modeTable = <TestL2Translation rows={rows} language={language} />; break;
+      case Mode.ShowWordAndTranslation:  modeTable = <ShowBothMode         {...args}/>; break;
+      case Mode.TestTranslation:         modeTable = <TestTranslationMode  {...args}/>; break;
+      case Mode.TestWord:                modeTable = <TestWordMode         {...args}/>; break;
       default:
    }
 
-   return (
-      <div className="mt-3 ml-1 ">
-         <div className=''>
-          <div className="btn-group btn-group-toggle   " data-toggle="buttons">
-           <label className={"btn btn-sm btn-secondary " + ((mode === Mode.ShowBoth)? 'active' : '')}
-                  title='Слово и перевод'>
-             <input type="radio" name="options" id="option1" autoComplete="off" checked={mode === Mode.ShowBoth}
-                    onChange={() => setMode(Mode.ShowBoth)} />
-             Сл+пер
-           </label>
-           <label className={"btn btn-sm btn-secondary " + ((mode === Mode.TestL1Translation)? 'active' : '')}
-                  title='Слово в перевод'>
-             <input type="radio" name="options" id="option2" autoComplete="off" checked={mode === Mode.TestL1Translation}
-                    onChange={() => setMode(Mode.TestL1Translation)} />
-             Сл→Пер
-           </label>
-           <label className={"btn btn-sm btn-secondary " + ((mode === Mode.TestL2Translation)? 'active' : '')}
-                  title='Перевод в слово'>
-             <input type="radio" name="options" id="option3" autoComplete="off" checked={mode === Mode.TestL2Translation}
-                    onChange={() => setMode(Mode.TestL2Translation)} />
-             Пер→Сл
-           </label>
-           
-          </div>
-         </div>
-         <div className=''>
-            <div className=' '>
-               {modeTable}
-            </div>
-         </div>
-      </div>
-      );
+   return (<tbody style={{ }} className={isActive ? "border border-primary" : ""}>{modeTable}</tbody>);
 }
+
+function InputTest() {
+   return (
+      <div className='m-1'>
+        <div>
+           <VirtualKeyboardInput/>
+        </div>
+        <div>
+           <VirtualKeyboardInput
+             placeholder=''
+             input_text=''
+             language='ko' />
+        </div>
+        <div>
+           <VirtualKeyboardInput
+             placeholder=''
+             input_text=''
+             language='ja' />
+        </div>
+     </div>);
+}
+
+const KanaMode = ({onChange}) => (
+    <div className="custom-control custom-checkbox mb-3">
+      <input type="checkbox" className="custom-control-input" id="customCheck" name="kanaMode" onChange={(e) => onChange(e.target.checked)} />
+      <label className="custom-control-label" htmlFor="customCheck">Отображать слова каной (理解 → りかい)</label>
+    </div>
+);
 
 function Matrix(props) {
    const [deck, setDeck] = useState({rows:[], name: '', language: ''});
+   const [activeCardId, setActiveCardId] = useState(undefined);
+   const [isKanaMode, setKanaMode] = useState(false);
    
    useEffect(() => {
       if(deck.name === ''){
@@ -232,38 +249,35 @@ function Matrix(props) {
 
    const chunk_size = 5;
 
-   let fragments = [];
+   let cards = [];
    for (let i=0, size = deck.rows.length; i < size; i += chunk_size) {
       const temparray = deck.rows.slice(i, i + chunk_size);
-      const fragmentData = { 
+      const cardData = { 
                      rows: temparray, 
                      name : '' + (i + 1) + '-' + (i + temparray.length),
-                     language : deck.language
+                     language : deck.language,
+                     isFirst: i === 0,
+                     isActive: activeCardId === i,
+                     onActivate: () => setActiveCardId(i),
+                     isKanaMode: isKanaMode
                    };
-      fragments.push(<FragmentMode key={i} {...fragmentData} />);
+      cards.push(<Card key={i} {...cardData} />);
    }
-   return (<div>
-              <h2 className="ml-3">{deck.name}</h2>
-              <div className='m-1'>
-                 <div>
-                    <VirtualKeyboardInput/>
-                 </div>
-                 <div>
-                    <VirtualKeyboardInput
-                      placeholder=''
-                      input_text=''
-                      language='ko' />
-                 </div>
-                 <div>
-                    <VirtualKeyboardInput
-                      placeholder=''
-                      input_text=''
-                      language='ja' />
-                 </div>
-              </div>
-              <div>
-                 {fragments}
-              </div>
+   const tableStyle = "table table-striped  table-nonfluid border";
+   return ( <div className="m-2">
+               <h2 className="ml-3">{deck.name}</h2>
+               { (['ja', 'cn' ].indexOf(deck.language)>= 0) ? <KanaMode onChange={(isSet) => setKanaMode(isSet)}/> : null }
+               <InputTest />
+               <table className={tableStyle}>
+                  <thead className="thead-light">
+                     <tr>
+                        <th >Режим повторения</th> 
+                        <th style={{ minWidth: '10em'}} >Слово</th> 
+                        <th >Перевод</th> 
+                     </tr>
+                  </thead>
+                  {cards}
+               </table>
            </div>);
 }
 
