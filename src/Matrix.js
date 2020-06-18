@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getDeck } from './User.js';
+import { User, Test } from './User.js';
 import queryString from 'query-string';
 import Editable from "./Editable";
 import VirtualKeyboardInput from "./VirtualKeyboardInput";
@@ -33,7 +33,7 @@ const Mode = Object.freeze({
       TestWord: 3
    })
    
-function ConfirmTranslationControls() {
+function ConfirmTranslationControls({wordId}) {
    const Step = Object.freeze({
          ShowOkFailed: 1,
          Ok: 2,
@@ -43,43 +43,48 @@ function ConfirmTranslationControls() {
    switch(step) {
       case Step.ShowOkFailed:
          return <React.Fragment>
-                  <button  className='d-table-cell ml-2 btn btn-success btn-sm ' onClick={()=> {setStep(Step.Ok)}}>
-                     Помню
-                  </button>
-                  <button  className={'d-table-cell ml-2 btn btn-danger btn-sm mx-1'} onClick={()=> {setStep(Step.Failed)}}>
-                     Забыто
-                  </button>
+                  <span className="float-right">
+                     <button className=' ml-2 btn btn-success btn-sm '
+                             onClick={()=> { setStep(Step.Ok); Test.setTranslationTestResult(wordId, true); }} >
+                        Помню
+                     </button>
+                     <button className=' ml-2 btn btn-danger btn-sm mx-1'
+                             onClick={()=> { setStep(Step.Failed); Test.setTranslationTestResult(wordId, true); }} >
+                        Не помню
+                     </button>
+                  </span>
                 </React.Fragment>
       case Step.Ok:
-         return <div className="text-success ml-2">{'\u2713'}</div>
+         return <span className="text-success float-right ml-2">{'\u2713'}</span>
       case Step.Failed:
-         return <div className="text-danger ml-2">{'\u2717'}</div>
+         return <span className="text-danger float-right ml-2">{'\u2717'}</span>
       default:
          return null;
    }
 }
 
+function getWordToShow(isKanaMode, item) {
+   return isKanaMode && item.extra !== undefined ? item.extra : item.word;
+}
 
 function ShowBothMode({rows, modeControls, isFirst, isKanaMode}) {
    isFirst = false;
    const rowElements = rows.map(
                   (item, index) => { 
-                     const wordToShow = isKanaMode && item.length >= 3 ? item[2] : item[0];
+                     const wordToShow = getWordToShow(isKanaMode, item);
                      if(index === 0) {
                         return (<tr key={index} >
                                     <td rowSpan={rows.length} >
                                       {modeControls}
                                     </td>
                                     <td className={isFirst ? "" : ""}>{wordToShow}</td>
-                                    <td>{item[1]}</td>
-                                    <td/>
-                              </tr>)
+                                    <td>{item.meaning}</td>
+                               </tr>)
                      } else {
                      return (<tr key={index}>
                                  <td>{wordToShow}</td>
-                                 <td>{item[1]}</td>
-                                 <td/>
-                           </tr>)
+                                 <td>{item.meaning}</td>
+                            </tr>)
                      }
                   });
    return rowElements;
@@ -88,12 +93,13 @@ function ShowBothMode({rows, modeControls, isFirst, isKanaMode}) {
 function TestTranslationMode({rows, modeControls, isFirst, isKanaMode}) {
    const [isTranslationShown, showTranslation] = useState(false);
 
-   const TranslationCell = ({translation}) => {
+   const TranslationCell = ({translation, wordId}) => {
                               return (<td>{isTranslationShown
-                                       ? (<div className="d-table-row">
-                                             <div className="d-table-cell">{translation}</div> 
-                                             <ConfirmTranslationControls />
-                                          </div>)
+                                       ? (<React.Fragment>
+                                             <span>{translation}</span> 
+                                             <ConfirmTranslationControls wordId={wordId} />
+                                          </React.Fragment>
+                                          )
                                        : '\u00A0'.repeat(/*translation.length*/10)}
                                  </td>)
                            };
@@ -104,17 +110,17 @@ function TestTranslationMode({rows, modeControls, isFirst, isKanaMode}) {
                        </button>;
    const rowElements = rows.map(
                   (item, index) => { 
-                     const wordToShow = isKanaMode && item.length >= 3 ? item[2] : item[0];
+                     const wordToShow = getWordToShow(isKanaMode, item);
                      if(index === 0) {
                         return (<tr key={index}>
                                     <td rowSpan={rows.length}>{modeControls} {buttonShow}</td>
                                     <td>{wordToShow}</td>
-                                    <TranslationCell translation={item[1]}/>
+                                    <TranslationCell translation={item.meaning} wordId={item.id} />
                               </tr>)
                      } else {
                         return (<tr key={index}>
                                   <td>{wordToShow}</td>
-                                  <TranslationCell translation={item[1]}/>
+                                  <TranslationCell translation={item.meaning} wordId={item.id} />
                                </tr>);
                      }
                   });
@@ -148,9 +154,9 @@ function RowToInputWord({modeControls, rowSpan, word, translation, language}) {
 function TestWordMode({rows, modeControls, language, isKanaMode}) {
    const rowElements = rows.map(
          (item, index) => {
-            const wordToShow = isKanaMode && item.length >= 3 ? item[2] : item[0];
+            const wordToShow = getWordToShow(isKanaMode, item);
             return <RowToInputWord word={wordToShow} 
-                                 translation={item[1]} 
+                                 translation={item.meaning} 
                                  language={language}
                                  modeControls={index === 0 ? modeControls : undefined}
                                  rowSpan={rows.length}
@@ -164,7 +170,7 @@ function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode})
 
    const ModeButton = ({buttonMode, name, title, id}) => {
              const style = isActive ? 'primary' : 'secondary';
-             return <label className={`btn btn-sm btn-outline-${style} ` + ((mode === buttonMode)? 'active' : '')}
+             return <label className={`btn btn-sm btn-outline-${style} text-left ` + ((mode === buttonMode)? 'active' : '')}
                         title={title}>
                         <input type="radio" name={"option"+id} id={"option"+id}
                         autoComplete="off" checked={mode === buttonMode}
@@ -174,9 +180,9 @@ function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode})
    };
    const modeControls = (
           <div className="btn-group-vertical btn-group-toggle p-0" data-toggle="buttons">
-            <ModeButton buttonMode={Mode.ShowWordAndTranslation} name="Слово и перевод"   title='Показать слово и перевод' id="0"/>
-            <ModeButton buttonMode={Mode.TestTranslation}        name="Проверить перевод" title='Проверить перевод' id="1"/>
-            <ModeButton buttonMode={Mode.TestWord}               name="Ввести слово"      title='Проверит слово' id="2"/>
+            <ModeButton buttonMode={Mode.ShowWordAndTranslation} name="1. Слово и перевод"   title='Показать слово и перевод' id="0"/>
+            <ModeButton buttonMode={Mode.TestTranslation}        name="2. Проверить перевод" title='Проверить перевод' id="1"/>
+            <ModeButton buttonMode={Mode.TestWord}               name="3. Ввести слово"      title='Проверит слово' id="2"/>
           </div>
    );
    let modeTable = null;
@@ -243,7 +249,7 @@ function Matrix(props) {
 
    const deckId = urlParams.id;
    const deckGetter = async () => {
-      const deckD = await getDeck(deckId, 0, 100);
+      const deckD = await User.getDeck(deckId, 0, 100);
       setDeck(deckD);
    }
 
@@ -263,7 +269,7 @@ function Matrix(props) {
                    };
       cards.push(<Card key={i} {...cardData} />);
    }
-   const tableStyle = "table table-striped  table-nonfluid border";
+   const tableStyle = "table table-striped table-sm  table-nonfluid border";
    return ( <div className="m-2">
                <h2 className="ml-3">{deck.name}</h2>
                { (['ja', 'cn' ].indexOf(deck.language)>= 0) ? <KanaMode onChange={(isSet) => setKanaMode(isSet)}/> : null }

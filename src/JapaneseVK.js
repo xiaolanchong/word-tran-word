@@ -487,21 +487,21 @@ function alphabet_to_kana(input, char, show_hiragana) {
                 return;
             } else if (rear_str.length >= 2 && rear_str.substr(0, 1) === rear_str.substr(1, 1)) {
                 const kana = find_hiragana(rear_str.substr(1) + char, show_hiragana);
-                if (kana != "") {
+                if (kana !== "") {
                     code_holder = head_str + (show_hiragana ? "っ" : "ッ") + kana;
                     replace_selection(input, code_holder, true);
                 } else check_romaji(input, rear_str.substr(1) + char);
                 return;
             } else {
                 const kana = find_hiragana(rear_str + char, show_hiragana);
-                if (kana != "") {
+                if (kana !== "") {
                     code_holder = head_str + kana;
                     replace_selection(input, code_holder, true);
                 } else check_romaji(input, rear_str + char);
             }
         } else {
             const kana = find_hiragana(char, show_hiragana);
-            if (kana != "") code_holder += kana;
+            if (kana !== "") code_holder += kana;
             else code_holder += char;
             replace_selection(input, code_holder, true);
         }
@@ -509,14 +509,14 @@ function alphabet_to_kana(input, char, show_hiragana) {
 }
 
 function find_hiragana(str, show_hiragana) {
-    if(show_hiragana==undefined) alert("No kana parameter defined");
+    if(show_hiragana===undefined) alert("No kana parameter defined"); // temp, delete after testing
     if (show_hiragana) {
         for (let i = 0; i < romaji_array.length; i++) {
-            if (romaji_array[i][0] == str) return romaji_array[i][1];
+            if (romaji_array[i][0] === str) return romaji_array[i][1];
         }
     } else { // katakana
         for (let i = 0; i < romaji_array.length; i++) {
-            if (romaji_array[i][0] == str) return romaji_array[i][2];
+            if (romaji_array[i][0] === str) return romaji_array[i][2];
         }
     }
     return "";
@@ -524,7 +524,7 @@ function find_hiragana(str, show_hiragana) {
 
 function check_romaji(input, str) {
     for (var i = 0; i < romaji_array.length; i++) {
-        if (romaji_array[i][0].indexOf(str) == 0) {
+        if (romaji_array[i][0].indexOf(str) === 0) {
             code_holder += str.substr(str.length - 1, 1);
             replace_selection(input, code_holder, true);
             return;
@@ -538,7 +538,7 @@ function key_down_japanese(e, key, input_ctrl, callback) {
     const show_hiragana = callback.show_hiragana;
     switch (key) {
         case 8:
-            if (code_holder != '') {
+            if (code_holder !== '') {
                 code_holder = code_holder.substr(0, code_holder.length - 1);
                 replace_selection(input_ctrl, code_holder, true);
                 //$('#word_list').hide();
@@ -547,33 +547,33 @@ function key_down_japanese(e, key, input_ctrl, callback) {
             }
             return true;
         case 9:
-            if (code_holder == '') replace_selection(input_ctrl, '    ', false);
+            if (code_holder === '') replace_selection(input_ctrl, '    ', false);
             return return_false();
         case 27:
             clear_all(input_ctrl);
             return return_false();
         case 33:  // page up
-            if (code_holder != '') {
+            if (code_holder !== '') {
                 //if ($('#last_list').is(':visible')) last_page();
                 callback.prev_page();
                 return return_false();
             }
             return true;
         case 34:  // page down
-            if (code_holder != '') {
+            if (code_holder !== '') {
                 //if ($('#next_list').is(':visible')) next_page();
                 callback.next_page();
                 return return_false();
             }
             return true;
         case 32:  // space
-            if (code_holder != '') {
+            if (code_holder !== '') {
                 if (!callback.is_word_div_visible()) {
                     if (show_hiragana) {
                         var str = "";
                         for (let i = 0; i < code_holder.length; i++) {
                             for (let j = 0; j < romaji_array.length; j++) {
-                                if (romaji_array[j][1] == code_holder.substr(i, 1)) {
+                                if (romaji_array[j][1] === code_holder.substr(i, 1)) {
                                     str += romaji_array[j][0];
                                     break;
                                 }
@@ -594,7 +594,7 @@ function key_down_japanese(e, key, input_ctrl, callback) {
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
                 return return_false();
-            } else if (code_holder != '') {
+            } else if (code_holder !== '') {
                 release_selection(input_ctrl);
                 return return_false();
             }
@@ -618,23 +618,23 @@ function key_down_japanese(e, key, input_ctrl, callback) {
         case 46:
         case 36:
         case 35:
-            if (code_holder != '') return return_false();
+            if (code_holder !== '') return return_false();
             return true;
         case 192:
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') replace_selection(input_ctrl, e.shiftKey ? '～' : '‘', false);
+            if (code_holder === '') replace_selection(input_ctrl, e.shiftKey ? '～' : '‘', false);
             return return_false();
         case 49:
             if (e.shiftKey) {
                 if (callback.is_word_div_visible()) {
                     callback.insert_word(callback.get_word_div_visible());
                 }
-                if (code_holder == '') replace_selection(input_ctrl, '！', false);
+                if (code_holder === '') replace_selection(input_ctrl, '！', false);
             } else {
                 if (callback.is_word_div_visible()) callback.insert_word(0);
-                else if (code_holder == '') replace_selection(input_ctrl, '１', false);
+                else if (code_holder === '') replace_selection(input_ctrl, '１', false);
             }
             return return_false();
         case 50:
@@ -642,10 +642,10 @@ function key_down_japanese(e, key, input_ctrl, callback) {
                 if (callback.is_word_div_visible()) {
                     callback.insert_word(callback.get_word_div_visible());
                 }
-                if (code_holder == '') replace_selection(input_ctrl, '＠', false);
+                if (code_holder === '') replace_selection(input_ctrl, '＠', false);
             } else {
                 if (callback.words_in_list() > 1) callback.insert_word(1);
-                else if (code_holder == '') replace_selection(input_ctrl, '２', false);
+                else if (code_holder === '') replace_selection(input_ctrl, '２', false);
             }
             return return_false();
         case 51:
@@ -653,10 +653,10 @@ function key_down_japanese(e, key, input_ctrl, callback) {
                 if (callback.is_word_div_visible()) {
                     callback.insert_word(callback.get_word_div_visible());
                 }
-                if (code_holder == '') replace_selection(input_ctrl, '＃', false);
+                if (code_holder === '') replace_selection(input_ctrl, '＃', false);
             } else {
                 if (callback.words_in_list() > 2) callback.insert_word(2);
-                else if (code_holder == '') replace_selection(input_ctrl, '３', false);
+                else if (code_holder === '') replace_selection(input_ctrl, '３', false);
             }
             return return_false();
         case 52:
@@ -664,10 +664,10 @@ function key_down_japanese(e, key, input_ctrl, callback) {
                 if (callback.is_word_div_visible()) {
                     callback.insert_word(callback.get_word_div_visible());
                 }
-                if (code_holder == '') replace_selection(input_ctrl, '＄', false);
+                if (code_holder === '') replace_selection(input_ctrl, '＄', false);
             } else {
                 if (callback.words_in_list() > 3) callback.insert_word(3);
-                else if (code_holder == '') replace_selection(input_ctrl, '４', false);
+                else if (code_holder === '') replace_selection(input_ctrl, '４', false);
             }
             return return_false();
         case 53:
@@ -675,10 +675,10 @@ function key_down_japanese(e, key, input_ctrl, callback) {
                 if (callback.is_word_div_visible()) {
                     callback.insert_word(callback.get_word_div_visible());
                 }
-                if (code_holder == '') replace_selection(input_ctrl, '％', false);
+                if (code_holder === '') replace_selection(input_ctrl, '％', false);
             } else {
                 if (callback.words_in_list() > 4) callback.insert_word(4);
-                else if (code_holder == '') replace_selection(input_ctrl, '５', false);
+                else if (code_holder === '') replace_selection(input_ctrl, '５', false);
             }
             return return_false();
         case 54:
@@ -686,10 +686,10 @@ function key_down_japanese(e, key, input_ctrl, callback) {
                 if (callback.is_word_div_visible()) {
                     callback.insert_word(callback.get_word_div_visible());
                 }
-                if (code_holder == '') replace_selection(input_ctrl, '＾', false);
+                if (code_holder === '') replace_selection(input_ctrl, '＾', false);
             } else {
                 if (callback.words_in_list() > 5) callback.insert_word(5);
-                else if (code_holder == '') replace_selection(input_ctrl, '６', false);
+                else if (code_holder === '') replace_selection(input_ctrl, '６', false);
             }
             return return_false();
         case 55:
@@ -697,10 +697,10 @@ function key_down_japanese(e, key, input_ctrl, callback) {
                 if (callback.is_word_div_visible()) {
                     callback.insert_word(callback.get_word_div_visible());
                 }
-                if (code_holder == '') replace_selection(input_ctrl, '＆', false);
+                if (code_holder === '') replace_selection(input_ctrl, '＆', false);
             } else {
                 if (callback.words_in_list() > 6) callback.insert_word(6);
-                else if (code_holder == '') replace_selection(input_ctrl, '７', false);
+                else if (code_holder === '') replace_selection(input_ctrl, '７', false);
             }
             return return_false();
         case 56:
@@ -708,10 +708,10 @@ function key_down_japanese(e, key, input_ctrl, callback) {
                 if (callback.is_word_div_visible()) {
                     callback.insert_word(callback.get_word_div_visible());
                 }
-                if (code_holder == '') replace_selection(input_ctrl, '＊', false);
+                if (code_holder === '') replace_selection(input_ctrl, '＊', false);
             } else {
                 if (callback.words_in_list() > 7) callback.insert_word(7);
-                else if (code_holder == '') replace_selection(input_ctrl, '８', false);
+                else if (code_holder === '') replace_selection(input_ctrl, '８', false);
             }
             return return_false();
         case 57:
@@ -719,10 +719,10 @@ function key_down_japanese(e, key, input_ctrl, callback) {
                 if (callback.is_word_div_visible()) {
                     callback.insert_word(callback.get_word_div_visible());
                 }
-                if (code_holder == '') replace_selection(input_ctrl, '（', false);
+                if (code_holder === '') replace_selection(input_ctrl, '（', false);
             } else {
                 if (callback.words_in_list() > 8) callback.insert_word(8);
-                else if (code_holder == '') replace_selection(input_ctrl, '９', false);
+                else if (code_holder === '') replace_selection(input_ctrl, '９', false);
             }
             return return_false();
         case 48:
@@ -730,10 +730,10 @@ function key_down_japanese(e, key, input_ctrl, callback) {
                 if (callback.is_word_div_visible()) {
                     callback.insert_word(callback.get_word_div_visible());
                 }
-                if (code_holder == '') replace_selection(input_ctrl, '）', false);
+                if (code_holder === '') replace_selection(input_ctrl, '）', false);
             } else {
                 if (callback.words_in_list() > 9) callback.insert_word(9);
-                else if (code_holder == '') replace_selection(input_ctrl, '０', false);
+                else if (code_holder === '') replace_selection(input_ctrl, '０', false);
             }
             return return_false();
         case 109:
@@ -741,7 +741,7 @@ function key_down_japanese(e, key, input_ctrl, callback) {
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') replace_selection(input_ctrl, e.shiftKey ? '＿' : 'ー', false);
+            if (code_holder === '') replace_selection(input_ctrl, e.shiftKey ? '＿' : 'ー', false);
             else if (!e.shiftKey) alphabet_to_kana(input_ctrl, 'ー', show_hiragana);
             return return_false();
         case 107:
@@ -749,7 +749,7 @@ function key_down_japanese(e, key, input_ctrl, callback) {
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') replace_selection(input_ctrl, e.shiftKey ? '＋' : '＝', false);
+            if (code_holder === '') replace_selection(input_ctrl, e.shiftKey ? '＋' : '＝', false);
             return return_false();
         case 81:
             if (callback.is_word_div_visible()) {
@@ -835,19 +835,19 @@ function key_down_japanese(e, key, input_ctrl, callback) {
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') replace_selection(input_ctrl, e.shiftKey ? '｛' : '「', false);
+            if (code_holder === '') replace_selection(input_ctrl, e.shiftKey ? '｛' : '「', false);
             return return_false();
         case 221:
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') replace_selection(input_ctrl, e.shiftKey ? '｝' : '」', false);
+            if (code_holder === '') replace_selection(input_ctrl, e.shiftKey ? '｝' : '」', false);
             return return_false();
         case 220:
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') replace_selection(input_ctrl, e.shiftKey ? '｜' : '￥', false);
+            if (code_holder === '') replace_selection(input_ctrl, e.shiftKey ? '｜' : '￥', false);
             return return_false();
         case 65:
             if (callback.is_word_div_visible()) {
@@ -926,13 +926,13 @@ function key_down_japanese(e, key, input_ctrl, callback) {
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') replace_selection(input_ctrl, e.shiftKey ? '：' : '；', false);
+            if (code_holder === '') replace_selection(input_ctrl, e.shiftKey ? '：' : '；', false);
             return return_false();
         case 222:
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') {
+            if (code_holder === '') {
                 if (e.shiftKey) {
                    left_yinhao2 = !left_yinhao2;
                    replace_selection(input_ctrl, left_yinhao2 ? '“' : '”', false);
@@ -1003,19 +1003,19 @@ function key_down_japanese(e, key, input_ctrl, callback) {
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') replace_selection(input_ctrl, e.shiftKey ? '＜' : '、', false);
+            if (code_holder === '') replace_selection(input_ctrl, e.shiftKey ? '＜' : '、', false);
             return return_false();
         case 190:
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') replace_selection(input_ctrl, e.shiftKey ? '＞' : '。', false);
+            if (code_holder === '') replace_selection(input_ctrl, e.shiftKey ? '＞' : '。', false);
             return return_false();
         case 191:
             if (callback.is_word_div_visible()) {
                 callback.insert_word(callback.get_word_div_visible());
             }
-            if (code_holder == '') replace_selection(input_ctrl, e.shiftKey ? '？' : '・', false);
+            if (code_holder === '') replace_selection(input_ctrl, e.shiftKey ? '？' : '・', false);
             return return_false();
         default:
             return undefined;
