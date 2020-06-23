@@ -1,5 +1,6 @@
 [
    {
+      "Id" : 401,
       "Name" : "Japanese Words (tab 1, a1)",
       "Language": "ja",
       "Description": "Трудные слова из колоды Анки 'Japanese Words'",
@@ -76,6 +77,7 @@
       ]
    },
    {
+      "Id" : 402,
       "Name" : "Japanese Words (tab 1, a2)",
       "Language": "ja",
       "Description": "Трудные слова из колоды Анки 'Japanese Words'",
@@ -194,6 +196,7 @@
       ]
    },
    {
+      "Id" : 403,
       "Name" : "Japanese Words (tab 1, a3)",
       "Language": "ja",
       "Description": "Трудные слова из колоды Анки 'Japanese Words'",
@@ -407,6 +410,7 @@
       ]
    },
    {
+      "Id" : 404,
       "Name" : "Japanese Words (tab 1, a4-8)",
       "Language": "ja",
       "Description": "Трудные слова из колоды Анки 'Japanese Words'",

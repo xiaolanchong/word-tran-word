@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import {User} from './User.js';
+import { getUser } from './User.js';
 
 class MatrixList extends React.Component {
    constructor(props) {
@@ -9,7 +9,7 @@ class MatrixList extends React.Component {
    }
    
    async componentDidMount() {
-      const decks = await User.getDeckList();
+      const decks = await getUser().getDeckList();
       this.setState({ decks: decks })
    }
 

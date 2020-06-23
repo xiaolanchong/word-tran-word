@@ -1,21 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import {Modal, Button, Form} from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
-import { User } from './User.js'
+import { NavLink, useHistory } from 'react-router-dom'
+import { getUser } from './User.js'
 
 const UserControl = () => {
    const [username, setUsername] = useState(undefined);
+   const history = useHistory();
    
    useEffect(() => {
       userGetter();
    });
 
    const userGetter = async () => {
-      const username = await User.getName();
+      const username = await getUser().getName();
       setUsername(username);
    }
    
-   return (username == undefined)
+   const onLogout = () => {
+      getUser().logout();
+      setUsername(undefined);
+      history.push('/');
+   }
+   
+   return (username === undefined)
             ? (
                <span className="float-right text-center ">
                   <Login />
@@ -25,7 +32,7 @@ const UserControl = () => {
             : (
                <span className="float-right">
                   <Button variant="link">{username}</Button>
-                  <Button variant="secondary ml-1">Выход</Button>
+                  <Button variant="secondary ml-1" onClick={onLogout}>Выход</Button>
                </span>
             );
 }
@@ -34,11 +41,22 @@ function Login() {
   const [show, setShow] = useState(false);
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+  const [rememberMe, setRememberMe] = useState(true);
+  //const history = useHistory();
+  
+   useEffect(() => {
+      if(username === undefined){
+         //deckGetter();
+      }
+   });
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const login = () => {
-     console.log(`${username}, ${password}`);
+     getUser().login(username, password, rememberMe).then(() => {
+        setUsername(username);
+        //history.push('/');
+     });
   }
 
   return (
@@ -61,7 +79,7 @@ function Login() {
              <Form.Control type="password" placeholder="Пароль" onChange={ (e) => setPassword(e.target.value) } />
            </Form.Group>
            <Form.Group controlId="formBasicCheckbox">
-             <Form.Check type="checkbox" label="Запомнить" />
+             <Form.Check type="checkbox" label="Запомнить" onChange={(e) => setRememberMe(e.target.checked)} />
            </Form.Group>
          </Form>
         </Modal.Body>

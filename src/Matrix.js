@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { User, Test } from './User.js';
+import { getUser, getTest } from './User.js';
 import queryString from 'query-string';
 import Editable from "./Editable";
 import VirtualKeyboardInput from "./VirtualKeyboardInput";
+import Pencil from "bootstrap-icons/icons/pencil.svg";
 
 function InputEditable({ethalon, onChange=((text) => {}), language}) {
    const [typedText, setTypedText] = useState("");
@@ -44,20 +45,20 @@ function ConfirmTranslationControls({wordId}) {
       case Step.ShowOkFailed:
          return <React.Fragment>
                   <span className="float-right">
-                     <button className=' ml-2 btn btn-success btn-sm '
-                             onClick={()=> { setStep(Step.Ok); Test.setTranslationTestResult(wordId, true); }} >
+                     <button className=' ml-2 btn btn-success btn-sm py-0' id={'remember-button-' + wordId}
+                             onClick={()=> { setStep(Step.Ok); getTest().setTranslationTestResult(wordId, true); }} >
                         Помню
                      </button>
-                     <button className=' ml-2 btn btn-danger btn-sm mx-1'
-                             onClick={()=> { setStep(Step.Failed); Test.setTranslationTestResult(wordId, true); }} >
+                     <button className=' ml-2 btn btn-danger btn-sm mx-1 py-0' id={'forgot-button-' + wordId}
+                             onClick={()=> { setStep(Step.Failed); getTest().setTranslationTestResult(wordId, false); }} >
                         Не помню
                      </button>
                   </span>
                 </React.Fragment>
       case Step.Ok:
-         return <span className="text-success float-right ml-2">{'\u2713'}</span>
+         return <span className="text-success float-right ml-2">{'\u00A0'.repeat(34) + '\u2713'}</span>
       case Step.Failed:
-         return <span className="text-danger float-right ml-2">{'\u2717'}</span>
+         return <span className="text-danger float-right ml-2">{'\u00A0'.repeat(34) + '\u2717'}</span>
       default:
          return null;
    }
@@ -70,7 +71,7 @@ function getWordToShow(isKanaMode, item) {
 function ShowBothMode({rows, modeControls, isFirst, isKanaMode}) {
    isFirst = false;
    const rowElements = rows.map(
-                  (item, index) => { 
+                  (item, index) => {
                      const wordToShow = getWordToShow(isKanaMode, item);
                      if(index === 0) {
                         return (<tr key={index} >
@@ -88,6 +89,23 @@ function ShowBothMode({rows, modeControls, isFirst, isKanaMode}) {
                      }
                   });
    return rowElements;
+}
+
+function getBgColorFromScore(score) {
+   switch(score) {
+      // better 98c9a3  best  77bfa3
+      case 3: return "#bfd8bd80";
+      case 2: return "#dde7c780";
+      case 1:
+      case 0: return 0;
+
+      case -1: return "#ffdab980";
+      case -2: return "#fbc4ab80";
+      case -3: 
+      case -4: return "#f8ad9d80";
+      default:
+         return (score > 0) ? "#98c9a380" : "#f4978e80";
+   }
 }
 
 function TestTranslationMode({rows, modeControls, isFirst, isKanaMode}) {
@@ -109,17 +127,18 @@ function TestTranslationMode({rows, modeControls, isFirst, isKanaMode}) {
                               Показать перевод
                        </button>;
    const rowElements = rows.map(
-                  (item, index) => { 
+                  (item, index) => {
+                     const bgColor = getBgColorFromScore(item.score);
                      const wordToShow = getWordToShow(isKanaMode, item);
                      if(index === 0) {
                         return (<tr key={index}>
                                     <td rowSpan={rows.length}>{modeControls} {buttonShow}</td>
-                                    <td>{wordToShow}</td>
+                                    <td style={{ backgroundColor: bgColor}}>{wordToShow}</td>
                                     <TranslationCell translation={item.meaning} wordId={item.id} />
                               </tr>)
                      } else {
                         return (<tr key={index}>
-                                  <td>{wordToShow}</td>
+                                  <td style={{backgroundColor: bgColor}}>{wordToShow}</td>
                                   <TranslationCell translation={item.meaning} wordId={item.id} />
                                </tr>);
                      }
@@ -226,15 +245,72 @@ function InputTest() {
 
 const KanaMode = ({onChange}) => (
     <div className="custom-control custom-checkbox mb-3">
-      <input type="checkbox" className="custom-control-input" id="customCheck" name="kanaMode" onChange={(e) => onChange(e.target.checked)} />
-      <label className="custom-control-label" htmlFor="customCheck">Отображать слова каной (理解 → りかい)</label>
+      <input type="checkbox" className="custom-control-input" id="kanaModeCheck" name="kanaMode" onChange={(e) => onChange(e.target.checked)} />
+      <label className="custom-control-label" htmlFor="kanaModeCheck">Отображать слова каной (理解 → りかい)</label>
     </div>
+);
+
+const VirtualKbd = ({onChange}) => (
+    <div className="custom-control custom-checkbox mb-3">
+      <input type="checkbox" className="custom-control-input" id="virtualKbdCheck" name="virtualKbd"
+             onChange={(e) => onChange(e.target.checked)} defaultChecked={true} />
+      <label className="custom-control-label" htmlFor="virtualKbdCheck">Виртуальная клавиатура</label>
+    </div>
+);
+
+const OnlyForgotten = ({onChange}) => (
+    <div className="custom-control custom-checkbox mb-3">
+      <input type="checkbox" className="custom-control-input" id="onlyForgotteCheck" name="onlyForgotten"
+             onChange={(e) => onChange(e.target.checked)} defaultChecked={false} />
+      <label className="custom-control-label" htmlFor="onlyForgotteCheck">Показывать только забытые слова</label>
+    </div>
+);
+
+// Create flag from country code
+function getCountryFlag(cc) {
+  // Mild sanity check.
+  if (cc.length !== 2)
+    return cc;
+
+  // Convert char to Regional Indicator Symbol Letter
+  function risl(chr) {
+    return String.fromCodePoint(0x1F1E6 - 65 + chr.toUpperCase().charCodeAt(0));
+  }
+
+  // Create RISL sequence from country code.
+  return risl(cc[0]) + risl(cc[1]);
+}
+
+const Emoji = props => (
+    <option
+        className="emoji"
+        role="img"
+        aria-label={props.label ?? ""}
+        aria-hidden={props.label ? "false" : "true"}
+        value={props.label ?? ""}
+    >
+        {props.symbol}
+    </option>
+);
+
+const LanguageSelector = ({language}) => (
+   <div className="form-group row" >
+      <label htmlFor="language-select" className="col-sm-1 col-form-label" >Язык: </label>
+      <select  style={{width: "10em"}} className="form-control" id="language-select" value={language} onChange={()=>{}}>
+         <option value="">Не указан</option>
+         <Emoji symbol={getCountryFlag('us') + ' Английский'} label="en" />
+         <Emoji symbol={getCountryFlag('kr') + ' Корейский'}  label="ko"  />
+         <Emoji symbol={getCountryFlag('jp') + ' Японский'}   label="ja" />
+      </select>
+   </div>
 );
 
 function Matrix(props) {
    const [deck, setDeck] = useState({rows:[], name: '', language: ''});
    const [activeCardId, setActiveCardId] = useState(undefined);
    const [isKanaMode, setKanaMode] = useState(false);
+   const [isVirtualKbd, setVirtualKbd] = useState(true);
+   const [isOnlyForgottenWords, setOnlyForgottenWords] = useState(false);
    
    useEffect(() => {
       if(deck.name === ''){
@@ -249,15 +325,22 @@ function Matrix(props) {
 
    const deckId = urlParams.id;
    const deckGetter = async () => {
-      const deckD = await User.getDeck(deckId, 0, 100);
+      const deckD = await getUser().getDeck(deckId, 0, 100);
       setDeck(deckD);
    }
+   
+   if (deck === undefined)
+      return null;
 
    const chunk_size = 5;
+   
+   const cardRows = !isOnlyForgottenWords 
+                        ? deck.rows 
+                        : deck.rows.filter((item) => item.score < 0);
 
    let cards = [];
-   for (let i=0, size = deck.rows.length; i < size; i += chunk_size) {
-      const temparray = deck.rows.slice(i, i + chunk_size);
+   for (let i=0, size = cardRows.length; i < size; i += chunk_size) {
+      const temparray = cardRows.slice(i, i + chunk_size);
       const cardData = { 
                      rows: temparray, 
                      name : '' + (i + 1) + '-' + (i + temparray.length),
@@ -269,10 +352,16 @@ function Matrix(props) {
                    };
       cards.push(<Card key={i} {...cardData} />);
    }
+
    const tableStyle = "table table-striped table-sm  table-nonfluid border";
    return ( <div className="m-2">
                <h2 className="ml-3">{deck.name}</h2>
+               
+               <div className="col-form-label" >{deck.description}</div>
+               <LanguageSelector language={deck.language} />
                { (['ja', 'cn' ].indexOf(deck.language)>= 0) ? <KanaMode onChange={(isSet) => setKanaMode(isSet)}/> : null }
+               { (['ja', 'cn' ].indexOf(deck.language)>= 0) ? <VirtualKbd onChange={(isSet) => {} } /> : null } 
+               <OnlyForgotten onChange={(isSet) => setOnlyForgottenWords(isSet)} />
                <InputTest />
                <table className={tableStyle}>
                   <thead className="thead-light">
