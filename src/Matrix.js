@@ -56,9 +56,9 @@ function ConfirmTranslationControls({wordId}) {
                   </span>
                 </React.Fragment>
       case Step.Ok:
-         return <span className="text-success float-right ml-2">{'\u00A0'.repeat(34) + '\u2713'}</span>
+         return <span className="text-success float-right ml-2">{'\u00A0'.repeat(7)  + '\u2713' + '\u00A0'.repeat(27)}</span>
       case Step.Failed:
-         return <span className="text-danger float-right ml-2">{'\u00A0'.repeat(34) + '\u2717'}</span>
+         return <span className="text-danger float-right ml-2">{ '\u00A0'.repeat(25) + '\u2717' + '\u00A0'.repeat(9)}</span>
       default:
          return null;
    }
@@ -115,7 +115,7 @@ function TestTranslationMode({rows, modeControls, isFirst, isKanaMode}) {
                               return (<td>{isTranslationShown
                                        ? (<React.Fragment>
                                              <span>{translation}</span> 
-                                             <ConfirmTranslationControls wordId={wordId} />
+                                             <ConfirmTranslationControls key={wordId} wordId={wordId} />
                                           </React.Fragment>
                                           )
                                        : '\u00A0'.repeat(/*translation.length*/10)}
@@ -161,7 +161,7 @@ function RowToInputWord({modeControls, rowSpan, word, translation, language}) {
                         />
                     </div>;
    return  (<tr>
-               {modeControls ? (<td rowSpan={rowSpan}>{modeControls}</td>) : ''}
+               {modeControls ? (<td rowSpan={rowSpan}>{modeControls}</td>) : null}
                <td>
                   {editable}
                   {after}
@@ -184,8 +184,13 @@ function TestWordMode({rows, modeControls, language, isKanaMode}) {
    return rowElements;
 }
 
-function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode}) {
-   const [mode, setMode] = useState(Mode.TestTranslation);
+function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode,
+               initialMode, onResetMode}) {
+   const [mode, setMode] = useState(initialMode ?? Mode.TestTranslation);
+   //console.log(initialMode ?? Mode.TestTranslation);
+   if(initialMode != undefined && initialMode != mode) {
+      setMode(initialMode);
+   }
 
    const ModeButton = ({buttonMode, name, title, id}) => {
              const style = isActive ? 'primary' : 'secondary';
@@ -222,26 +227,7 @@ function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode})
    return (<tbody style={{ }} className={isActive ? "border border-primary" : ""}>{modeTable}</tbody>);
 }
 
-function InputTest() {
-   return (
-      <div className='m-1'>
-        <div>
-           <VirtualKeyboardInput/>
-        </div>
-        <div>
-           <VirtualKeyboardInput
-             placeholder=''
-             input_text=''
-             language='ko' />
-        </div>
-        <div>
-           <VirtualKeyboardInput
-             placeholder=''
-             input_text=''
-             language='ja' />
-        </div>
-     </div>);
-}
+
 
 const KanaMode = ({onChange}) => (
     <div className="custom-control custom-checkbox mb-3">
@@ -305,12 +291,37 @@ const LanguageSelector = ({language}) => (
    </div>
 );
 
+const SetAllCardMode = ({mode, onModeChange}) => {
+   return (
+         <div className="form-group row">
+            <label className="col-sm-1 col-form-label">Общий режим:</label>
+            { /*<div className="my-2 form-control"> */ }
+               <button className='btn btn-outline-primary' 
+                       disabled={mode == Mode.ShowWordAndTranslation}
+                       onClick={()=> onModeChange(Mode.ShowWordAndTranslation)} >
+                 1. Слово и перевод
+               </button>
+               <button className='btn btn-outline-primary ml-2' 
+                       disabled={mode == Mode.TestTranslation}
+                       onClick={()=> onModeChange(Mode.TestTranslation)} >
+                 2. Проверить перевод
+               </button>
+               <button className='btn btn-outline-primary ml-2' 
+                       disabled={mode == Mode.TestWord}
+                       onClick={()=> onModeChange(Mode.TestWord)} >
+                 3. Ввести слово
+               </button>
+           {  /*</div>*/ }
+           </div>);
+}
+
 function Matrix(props) {
    const [deck, setDeck] = useState({rows:[], name: '', language: ''});
    const [activeCardId, setActiveCardId] = useState(undefined);
    const [isKanaMode, setKanaMode] = useState(false);
    const [isVirtualKbd, setVirtualKbd] = useState(true);
    const [isOnlyForgottenWords, setOnlyForgottenWords] = useState(false);
+   const [initialMode, setInitialMode] = useState(Mode.TestTranslation);
    
    useEffect(() => {
       if(deck.name === ''){
@@ -347,8 +358,10 @@ function Matrix(props) {
                      language : deck.language,
                      isFirst: i === 0,
                      isActive: activeCardId === i,
-                     onActivate: () => setActiveCardId(i),
-                     isKanaMode: isKanaMode
+                     onActivate: () => { setActiveCardId(i); setInitialMode(undefined) },
+                     isKanaMode: isKanaMode,
+                     initialMode: initialMode,
+                  //   onResetMode: () => setInitialMode(undefined)
                    };
       cards.push(<Card key={i} {...cardData} />);
    }
@@ -362,7 +375,8 @@ function Matrix(props) {
                { (['ja', 'cn' ].indexOf(deck.language)>= 0) ? <KanaMode onChange={(isSet) => setKanaMode(isSet)}/> : null }
                { (['ja', 'cn' ].indexOf(deck.language)>= 0) ? <VirtualKbd onChange={(isSet) => {} } /> : null } 
                <OnlyForgotten onChange={(isSet) => setOnlyForgottenWords(isSet)} />
-               <InputTest />
+               <SetAllCardMode mode={initialMode}
+                               onModeChange={ (mode) => setInitialMode(mode) } />
                <table className={tableStyle}>
                   <thead className="thead-light">
                      <tr>

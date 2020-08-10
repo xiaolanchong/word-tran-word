@@ -2,6 +2,7 @@ import Data from './deck/Data.json';
 import Coca from './deck/Coca.json';
 import Topik1 from './deck/Topik1.json';
 import JapaneseWords from './deck/JapaneseWords.json';
+import KorBooks from './deck/KorBooks.json';
 
 
 /// --------- Local ----------------
@@ -9,7 +10,10 @@ import JapaneseWords from './deck/JapaneseWords.json';
 const localStorage = window.localStorage;
 
 function getAllLocalData() {
-   return Data.concat(Topik1).concat(Coca).concat(JapaneseWords);
+   return Data.concat(Topik1)
+              .concat(Coca)
+              .concat(JapaneseWords)
+              .concat(KorBooks);
 }
 
 function getProperty(entity, id, propertyName) {
@@ -117,7 +121,6 @@ class LocalDeck {
 
 function getScoreAfterTest(prevScore, succeeded) {
    let newScore = 0;
-   console.log(typeof prevScore);
    if (prevScore === 0)
       newScore = prevScore + (succeeded ? 1 : -1);
    else if (prevScore > 0)

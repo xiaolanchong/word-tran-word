@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-//import logo from './logo.svg';
 import './App.css';
 import { MatrixList } from './MatrixList.js'
 import { Matrix } from './Matrix.js'
 import { NavBar } from './NavBar.js'
+import { TestPage } from './TestPage.js'
 
 function Error() {
    return (
@@ -22,6 +22,7 @@ function App() {
             <Switch>
              <Route path="/" component={MatrixList} exact/>
              <Route path="/matrix" component={Matrix}/>
+             <Route path="/test" component={TestPage}/>
              <Route component={Error}/>
            </Switch>
       </BrowserRouter>

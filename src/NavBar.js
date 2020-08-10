@@ -103,6 +103,7 @@ class NavBar extends React.Component {
             <nav className='p-1 bg-dark'>
                <img className=' m-2' src='/mind_icon_src.png' alt='logo' width='32' height='32' />
                <NavLink to='/' className=' ml-2'>Все списки</NavLink>
+               <NavLink to='/test' className=' ml-3'>Тест-страница</NavLink>
                <NavLink to='/about' className=' ml-3'>О программе</NavLink>
                <UserControl />
             </nav>
