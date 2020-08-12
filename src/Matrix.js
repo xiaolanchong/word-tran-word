@@ -3,7 +3,6 @@ import { getUser, getTest } from './User.js';
 import queryString from 'query-string';
 import Editable from "./Editable";
 import VirtualKeyboardInput from "./VirtualKeyboardInput";
-import Pencil from "bootstrap-icons/icons/pencil.svg";
 
 function InputEditable({ethalon, onChange=((text) => {}), language}) {
    const [typedText, setTypedText] = useState("");
@@ -113,12 +112,12 @@ function TestTranslationMode({rows, modeControls, isFirst, isKanaMode}) {
 
    const TranslationCell = ({translation, wordId}) => {
                               return (<td>{isTranslationShown
-                                       ? (<React.Fragment>
+                                       ? (<>
                                              <span>{translation}</span> 
                                              <ConfirmTranslationControls key={wordId} wordId={wordId} />
-                                          </React.Fragment>
+                                          </>
                                           )
-                                       : '\u00A0'.repeat(/*translation.length*/10)}
+                                       : <span className='text-muted'>{'\u00A0'.repeat(/*translation.length/2*/5) + '?' + '\u00A0'.repeat(/*translation.length/2*/5)}</span>}
                                  </td>)
                            };
    const buttonShow =  <button className={'btn btn-outline-info btn-sm mt-2 d-block '}
@@ -188,7 +187,7 @@ function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode,
                initialMode, onResetMode}) {
    const [mode, setMode] = useState(initialMode ?? Mode.TestTranslation);
    //console.log(initialMode ?? Mode.TestTranslation);
-   if(initialMode != undefined && initialMode != mode) {
+   if(initialMode !== undefined && initialMode !== mode) {
       setMode(initialMode);
    }
 
@@ -267,64 +266,76 @@ function getCountryFlag(cc) {
   return risl(cc[0]) + risl(cc[1]);
 }
 
-const Emoji = props => (
-    <option
-        className="emoji"
-        role="img"
-        aria-label={props.label ?? ""}
-        aria-hidden={props.label ? "false" : "true"}
-        value={props.label ?? ""}
-    >
-        {props.symbol}
-    </option>
-);
+const LanguageSelector = ({language}) => {
+  return (<span>
+            Язык: {getCountryFlag(language)}
+          </span>)
+}
 
-const LanguageSelector = ({language}) => (
-   <div className="form-group row" >
-      <label htmlFor="language-select" className="col-sm-1 col-form-label" >Язык: </label>
-      <select  style={{width: "10em"}} className="form-control" id="language-select" value={language} onChange={()=>{}}>
-         <option value="">Не указан</option>
-         <Emoji symbol={getCountryFlag('us') + ' Английский'} label="en" />
-         <Emoji symbol={getCountryFlag('kr') + ' Корейский'}  label="ko"  />
-         <Emoji symbol={getCountryFlag('jp') + ' Японский'}   label="ja" />
-      </select>
-   </div>
-);
+const RadioButton = ({currentMode, myMode, text, onModeChange}) => {
+  const active = currentMode === myMode
+  return (
+  <>
+    <label class={`btn btn-secondary ${active ? 'active' : ''}`}>
+      <input type="radio" name="options" id="option1" autocomplete="off"
+              checkedAttr={currentMode === myMode}
+              onChange={()=> onModeChange(myMode)}
+      /> {text}
+    </label>
+  </>
+  )
+}
 
 const SetAllCardMode = ({mode, onModeChange}) => {
+  const args = {currentMode: mode, onModeChange: onModeChange}
    return (
-         <div className="form-group row">
-            <label className="col-sm-1 col-form-label">Общий режим:</label>
-            { /*<div className="my-2 form-control"> */ }
-               <button className='btn btn-outline-primary' 
-                       disabled={mode == Mode.ShowWordAndTranslation}
-                       onClick={()=> onModeChange(Mode.ShowWordAndTranslation)} >
-                 1. Слово и перевод
-               </button>
-               <button className='btn btn-outline-primary ml-2' 
-                       disabled={mode == Mode.TestTranslation}
-                       onClick={()=> onModeChange(Mode.TestTranslation)} >
-                 2. Проверить перевод
-               </button>
-               <button className='btn btn-outline-primary ml-2' 
-                       disabled={mode == Mode.TestWord}
-                       onClick={()=> onModeChange(Mode.TestWord)} >
-                 3. Ввести слово
-               </button>
-           {  /*</div>*/ }
-           </div>);
+      
+      <div class="btn-group btn-group-toggle m-2" data-toggle="buttons">
+        <label className="mr-2">Общий режим:</label>
+        <RadioButton myMode={Mode.ShowWordAndTranslation}
+                     text='Слово и перевод'
+                    {...args} />
+        <RadioButton myMode={Mode.TestTranslation}
+                     text='Проверить перевод'
+                    {...args} />
+        <RadioButton myMode={Mode.TestWord}
+                     text='Ввести слово'
+                    {...args} />
+      </div>
+   )
+}
+
+const Page = (props) => 
+  <>
+    <div className='container-md'>
+      <Matrix {...props} />
+    </div>
+  </>
+
+const GlobalControls = ({deck, setInitialMode, initialMode, 
+                         setKanaMode, setOnlyForgottenWords, }) => {
+  const supportsExtraMode = [ 'ja', 'cn' ].includes(deck.language) // kana or pinyin
+  return (
+  <>
+     <LanguageSelector language={deck.language} />
+    { supportsExtraMode ? <KanaMode onChange={(isSet) => setKanaMode(isSet)}/> : null }
+    { supportsExtraMode ? <VirtualKbd onChange={(isSet) => {} } /> : null } 
+    <OnlyForgotten onChange={(isSet) => setOnlyForgottenWords(isSet)} />
+    <SetAllCardMode mode={initialMode}
+                   onModeChange={ (mode) => setInitialMode(mode) } />
+  </>
+  )
 }
 
 function Matrix(props) {
    const [deck, setDeck] = useState({rows:[], name: '', language: ''});
    const [activeCardId, setActiveCardId] = useState(undefined);
    const [isKanaMode, setKanaMode] = useState(false);
-   const [isVirtualKbd, setVirtualKbd] = useState(true);
    const [isOnlyForgottenWords, setOnlyForgottenWords] = useState(false);
    const [initialMode, setInitialMode] = useState(Mode.TestTranslation);
    
    useEffect(() => {
-      if(deck.name === ''){
+      if(deck?.name === ''){
          deckGetter();
       }
    });
@@ -336,15 +347,15 @@ function Matrix(props) {
 
    const deckId = urlParams.id;
    const deckGetter = async () => {
-      const deckD = await getUser().getDeck(deckId, 0, 100);
+      const deckD = await getUser().getDeck(deckId, 0, 100)
       setDeck(deckD);
    }
    
    if (deck === undefined)
-      return null;
+      return (<><h1 className='text-center'>Не такой колоды</h1></>)
 
-   const chunk_size = 5;
-   
+   const chunk_size = 5
+   console.log(deck)
    const cardRows = !isOnlyForgottenWords 
                         ? deck.rows 
                         : deck.rows.filter((item) => item.score < 0);
@@ -361,7 +372,6 @@ function Matrix(props) {
                      onActivate: () => { setActiveCardId(i); setInitialMode(undefined) },
                      isKanaMode: isKanaMode,
                      initialMode: initialMode,
-                  //   onResetMode: () => setInitialMode(undefined)
                    };
       cards.push(<Card key={i} {...cardData} />);
    }
@@ -371,12 +381,8 @@ function Matrix(props) {
                <h2 className="ml-3">{deck.name}</h2>
                
                <div className="col-form-label" >{deck.description}</div>
-               <LanguageSelector language={deck.language} />
-               { (['ja', 'cn' ].indexOf(deck.language)>= 0) ? <KanaMode onChange={(isSet) => setKanaMode(isSet)}/> : null }
-               { (['ja', 'cn' ].indexOf(deck.language)>= 0) ? <VirtualKbd onChange={(isSet) => {} } /> : null } 
-               <OnlyForgotten onChange={(isSet) => setOnlyForgottenWords(isSet)} />
-               <SetAllCardMode mode={initialMode}
-                               onModeChange={ (mode) => setInitialMode(mode) } />
+               <GlobalControls deck={deck} initialMode={initialMode} setInitialMode={ setInitialMode }
+                  setKanaMode={setKanaMode} setOnlyForgottenWords={setOnlyForgottenWords} />
                <table className={tableStyle}>
                   <thead className="thead-light">
                      <tr>
@@ -390,4 +396,4 @@ function Matrix(props) {
            </div>);
 }
 
-export { Matrix };
+export { Page as Matrix };

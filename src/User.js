@@ -1,19 +1,88 @@
-import Data from './deck/Data.json';
 import Coca from './deck/Coca.json';
 import Topik1 from './deck/Topik1.json';
 import JapaneseWords from './deck/JapaneseWords.json';
-import KorBooks from './deck/KorBooks.json';
+import TextDecks from './deck/TextDecks.json' 
 
+
+async function* makeTextFileLineIterator(fileURL) {
+  const utf8Decoder = new TextDecoder('utf-8');
+  const response = await fetch(fileURL);
+  const reader = response.body.getReader();
+  let { value: chunk, done: readerDone } = await reader.read();
+  chunk = chunk ? utf8Decoder.decode(chunk) : '';
+
+  const re = /\n|\r|\r\n/gm;
+  let startIndex = 0;
+
+  for (;;) {
+    let result = re.exec(chunk);
+    if (!result) {
+      if (readerDone) {
+        break;
+      }
+      let remainder = chunk.substr(startIndex);
+      ({ value: chunk, done: readerDone } = await reader.read());
+      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : '');
+      startIndex = re.lastIndex = 0;
+      continue;
+    }
+    yield chunk.substring(startIndex, result.index);
+    startIndex = re.lastIndex;
+  }
+  if (startIndex < chunk.length) {
+    // last line didn't end in a newline char
+    yield chunk.substr(startIndex);
+  }
+}
+
+/// Utils
+function getWordId(deckId, wordNumberInDeck) {
+  const MAX_WORDS_IN_DECK = 100000
+  return deckId * MAX_WORDS_IN_DECK + wordNumberInDeck;
+}
+
+function getWordScore(wordId) {
+  return +getProperty("word", wordId, "translation_score")
+}
 
 /// --------- Local ----------------
 
 const localStorage = window.localStorage;
 
+
+/*  
+  Format: array of records:
+{    "Id" : 1001,
+      "Name" : "Пинбол-1973",
+      "Description" : "Слова из Пинбол-1973",
+      "Language": "ko",
+      "Rows" : [
+        ["가게",  "магазин, лавка"],
+        ...
+      ]
+ */
 function getAllLocalData() {
-   return Data.concat(Topik1)
-              .concat(Coca)
-              .concat(JapaneseWords)
-              .concat(KorBooks);
+   return [].concat(Topik1)
+            .concat(Coca)
+            .concat(JapaneseWords)
+            ;
+}
+
+/*
+  Format:
+  {
+      "Id" : 2000,
+      "Name" : "Pinball 1973",
+      "Language": "ko",
+      "File": "Pinball1973.txt"
+      contents of Pinball1973.txt
+        닥치다	приблизиться
+        word \t meaning
+  }
+*/
+
+function getTextData() {
+  return TextDecks
 }
 
 function getProperty(entity, id, propertyName) {
@@ -64,33 +133,49 @@ class LocalUser {
    
    async getDeckList() {
       await setTimeout(100);
-      return getAllLocalData().map( (item, index) => {
+      const jsonDecks = getAllLocalData().map( (item, index) => {
          return {
             id: item.Id,
             name: item.Name,
             description: item.Description,
             language: item.Language,
-            row_number: item.Rows.length
+            rowNumber: item.Rows.length
          }
       })
+      const textDecks = getTextData().map( (item) => {
+        return {
+           id: item.Id,
+           name: item.Name,
+           description: item.Description,
+           language: item.Language,
+           rowNumber: undefined,
+        }
+      })
+      return jsonDecks.concat(textDecks)
    }
    
    async getDeck(id, fromRow, number) {
       await setTimeout(100);
       const data = getAllLocalData();
       const deckData = data.find( (deck) => deck.Id === +id );
-      if (deckData === undefined)
-         return null;
+      if (deckData === undefined) {
+        const deckDesc = getTextData().find( (deck) => deck.Id === +id )
+        if (deckDesc !== undefined) {
+          return this.getTextDeck(deckDesc)
+        }
+        else
+          return undefined
+      }
       
       const rowsWithId = deckData.Rows.map((item, index) => {
-         const wordId = id * 100000 + index;
-         const transScore = +getProperty(`word`, wordId, `translation_score`);
+         const wordId = getWordId(id, index)
+         const transScore = getWordScore(wordId)
          return {
-         id: wordId,
-         word: item[0],
-         meaning: item[1],
-         extra: item[2],
-         score: Math.floor(transScore) // + getProperty(`word`, wordId, `word_score`) ?? 0) / 2,
+           id: wordId,
+           word: item[0],
+           meaning: item[1],
+           extra: item[2],
+           score: Math.floor(transScore) // + getProperty(`word`, wordId, `word_score`) ?? 0) / 2,
          }
       }); 
       return {
@@ -102,6 +187,48 @@ class LocalUser {
       };
    }
    
+   async getTextDeck(deckDesc) {
+     const url = `${process.env.PUBLIC_URL}/deck/${deckDesc.FileName}`
+     const rows = []
+     let index = 0
+     for await (let line of makeTextFileLineIterator(url)) {
+       if (line.length === 0 )
+         continue
+       const parts = line.split('\t')
+       const wordId = getWordId(deckDesc.Id, index)
+       const newRecord = {
+         id: wordId,
+         score: getWordScore(wordId)
+       }
+
+       switch (parts.length) {
+         case 1:
+           newRecord.word = parts[0]
+           break
+         case 2:
+           newRecord.word = parts[0]
+           newRecord.meaning = parts[1]
+           break
+         case 3:
+           newRecord.word = parts[0]
+           newRecord.extra = parts[1]
+           newRecord.meaning = parts[2]
+           break
+         default:
+           break
+       }
+
+       rows.push(newRecord)
+       ++index
+     }
+     return {
+       id: deckDesc.Id,
+       name: deckDesc.Name,
+       description: deckDesc.Description,
+       language: deckDesc.Language,
+       rows: rows
+     }
+   }
 
 }
 

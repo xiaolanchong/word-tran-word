@@ -19,7 +19,7 @@ const UserControl = () => {
    const onLogout = () => {
       getUser().logout();
       setUsername(undefined);
-      history.push('/');
+      history.push(`${process.env.PUBLIC_URL}/`);
    }
    
    return (username === undefined)
@@ -42,11 +42,9 @@ function Login() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [rememberMe, setRememberMe] = useState(true);
-  //const history = useHistory();
   
    useEffect(() => {
       if(username === undefined){
-         //deckGetter();
       }
    });
 
@@ -55,7 +53,6 @@ function Login() {
   const login = () => {
      getUser().login(username, password, rememberMe).then(() => {
         setUsername(username);
-        //history.push('/');
      });
   }
 
@@ -101,10 +98,10 @@ class NavBar extends React.Component {
       return (
          <header>
             <nav className='p-1 bg-dark'>
-               <img className=' m-2' src='/mind_icon_src.png' alt='logo' width='32' height='32' />
-               <NavLink to='/' className=' ml-2'>Все списки</NavLink>
-               <NavLink to='/test' className=' ml-3'>Тест-страница</NavLink>
-               <NavLink to='/about' className=' ml-3'>О программе</NavLink>
+               <img src={`${process.env.PUBLIC_URL}/mind_icon_src.png`} className='m-2' alt='logo' width='32' height='32' />
+               <NavLink to={`${process.env.PUBLIC_URL}/`} className=' ml-2'>Все списки</NavLink>
+               <NavLink to={`${process.env.PUBLIC_URL}/test`} className=' ml-3'>Тест-страница</NavLink>
+               <NavLink to={`${process.env.PUBLIC_URL}/about`} className=' ml-3'>О программе</NavLink>
                <UserControl />
             </nav>
          </header>

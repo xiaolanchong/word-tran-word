@@ -20,9 +20,9 @@ function App() {
       <BrowserRouter>
          <NavBar />
             <Switch>
-             <Route path="/" component={MatrixList} exact/>
-             <Route path="/matrix" component={Matrix}/>
-             <Route path="/test" component={TestPage}/>
+             <Route path={`${process.env.PUBLIC_URL}/`} component={MatrixList} exact/>
+             <Route path={`${process.env.PUBLIC_URL}/deck`} component={Matrix}/>
+             <Route path={`${process.env.PUBLIC_URL}/test`} component={TestPage}/>
              <Route component={Error}/>
            </Switch>
       </BrowserRouter>

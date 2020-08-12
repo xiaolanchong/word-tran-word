@@ -16,26 +16,28 @@ class MatrixList extends React.Component {
    render() {
       const rows = this.state.decks.map( (deck, index) =>
          <tr key={index}>
-            <td><Link to={`/matrix?id=${deck.id}`}>{deck.name}</Link></td>
+            <td><Link to={`${process.env.PUBLIC_URL}/deck?id=${deck.id}`}>{deck.name}</Link></td>
             <td>{deck.description ?? ''}</td>
             <td>{deck.language}</td>
-            <td className="text-right">{deck.row_number}</td>
+            <td className="text-right">{deck.rowNumber ?? '?'}</td>
          </tr>
       );
       return (
-         <table className="table table-nonfluid ml-1">
-            <thead className="thead-light">
-               <tr>
-                  <th>Название</th>
-                  <th>Описание</th>
-                  <th>Язык</th>
-                  <th>Кол-во записей</th>
-               </tr>
-            </thead>
-            <tbody>
-               {rows}
-            </tbody>
-         </table>
+         <div className='container'>
+               <table className="table table-nonfluid ml-1">
+                  <thead className="thead-light">
+                     <tr>
+                        <th>Название</th>
+                        <th>Описание</th>
+                        <th>Язык</th>
+                        <th>Кол-во записей</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     {rows}
+                  </tbody>
+               </table>
+        </div>
       );
    }
 }
