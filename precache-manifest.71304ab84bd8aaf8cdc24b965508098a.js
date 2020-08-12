@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5bda971308e63026ff548b27d08f3447",
+    "revision": "e6bc8ef6e030ca32cc7b59ec1d467428",
     "url": "/word-tran-word/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/word-tran-word/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "fbd99fbc738c09475ed7",
+    "revision": "bb247a05a399ee60e5ed",
     "url": "/word-tran-word/static/css/main.6c1fd8eb.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/word-tran-word/static/js/2.d97f3a80.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fbd99fbc738c09475ed7",
-    "url": "/word-tran-word/static/js/main.616e4315.chunk.js"
+    "revision": "bb247a05a399ee60e5ed",
+    "url": "/word-tran-word/static/js/main.101a3a21.chunk.js"
   },
   {
     "revision": "0c5e3db3a4098179a5a1",
