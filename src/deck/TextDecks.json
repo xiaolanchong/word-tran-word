@@ -5,5 +5,12 @@
       "Description": "Слова из книги „Пинбол 1973“",
       "Language": "ko",
       "FileName": "Pinball1973.txt"
+   },
+   {
+      "Id" : 2001,
+      "Name" : "Чтение ханчи уровни 1-8",
+      "Description": "Чтение ханчи экзамена 한자검정시험, уровни 1-8",
+      "Language": "ko",
+      "FileName": "HanjaReading.txt"
    }
 ]

@@ -384,7 +384,7 @@ function Matrix(props) {
                <GlobalControls deck={deck} initialMode={initialMode} setInitialMode={ setInitialMode }
                   setKanaMode={setKanaMode} setOnlyForgottenWords={setOnlyForgottenWords} />
                <table className={tableStyle}>
-                  <thead className="thead-light">
+                  <thead className="thead-dark">
                      <tr>
                         <th >Режим повторения</th> 
                         <th style={{ minWidth: '10em'}} >Слово</th> 

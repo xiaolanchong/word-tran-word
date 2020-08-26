@@ -93,20 +93,15 @@ function Login() {
   );
 }
 
-class NavBar extends React.Component {
-   render() {
-      return (
-         <header>
-            <nav className='p-1 bg-dark'>
-               <img src={`${process.env.PUBLIC_URL}/mind_icon_src.png`} className='m-2' alt='logo' width='32' height='32' />
-               <NavLink to={`${process.env.PUBLIC_URL}/`} className=' ml-2'>Все списки</NavLink>
-               <NavLink to={`${process.env.PUBLIC_URL}/test`} className=' ml-3'>Тест-страница</NavLink>
-               <NavLink to={`${process.env.PUBLIC_URL}/about`} className=' ml-3'>О программе</NavLink>
-               <UserControl />
-            </nav>
-         </header>
-      );
-   }
-}
+const NavBar = () =>
+   <header>
+      <nav className='p-1 bg-dark'>
+         <img src={`${process.env.PUBLIC_URL}/mind_icon_src.png`} className='m-2' alt='logo' width='32' height='32' />
+         <NavLink to={`${process.env.PUBLIC_URL}/`} className=' ml-2'>Все списки</NavLink>
+         <NavLink to={`${process.env.PUBLIC_URL}/test`} className=' ml-3'>Тест-страница</NavLink>
+         <NavLink to={`${process.env.PUBLIC_URL}/about`} className=' ml-3'>О программе</NavLink>
+         <UserControl />
+      </nav>
+   </header>
 
 export { NavBar };

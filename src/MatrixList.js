@@ -25,7 +25,7 @@ class MatrixList extends React.Component {
       return (
          <div className='container'>
                <table className="table table-nonfluid ml-1">
-                  <thead className="thead-light">
+                  <thead className="thead-dark">
                      <tr>
                         <th>Название</th>
                         <th>Описание</th>
