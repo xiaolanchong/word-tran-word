@@ -1,0 +1,129 @@
+真価	しんか	(n) true value/real worth/(P)
+陳腐	ちんぷ	(adj-na,n) stale/hackneyed/cliched/(P)
+手がける	てがける	(v1) to make/to do/to produce/to work on
+数少ない	かずすくない	(adj-i) few in number
+図抜ける	ずぬける	(v1,vi) to tower above/to stand out
+消失	しょうしつ	(n,vs) die out/disappear/vanish
+一編	いっぺん	(n) piece (of poetry)
+中心的	ちゅうしんてき	(adj-na) central/mainline
+連載	れんさい	(n,vs,adj-no) serialization/serialisation/serial story
+割愛	かつあい	(n,vs) giving something up reluctantly/omitting/leaving out/sparing
+備忘録	びぼうろく	(n) notebook/memorandum
+差し掛かる	さしかかる	(v5r) to come near to/to approach/(P)
+頓挫	とんざ	(n,vs) setback/at a standstill or impasse
+つかつか		(adv,adv-to,on-mim) walking briskly/determinedly
+凪ぐ	なぐ	(v5g,vi) to become calm/to die down
+きする		(vs-s,vi) to expect/to look forward to
+万華鏡	まんげきょう	(n) kaleidoscope
+全科	ぜんか	(n) complete course
+診療	しんりょう	(n,vs) medical examination and treatment/diagnosis/(P)
+開業医	かいぎょうい	(n) private clinician/physician in private practice/general practitioner
+医療器具	いりょうきぐ	(n) medical apparatus/medical instruments
+演繹	えんえき	(n,vs) deductive reasoning/deduction
+同業者	どうぎょうしゃ	(n) person in the same business/the profession/the trade
+頬髯	ほおひげ	(n) whiskers/sideburns/sideboards
+やつれる		(v1,vi,uk) to be worn out/(P)
+所作	しょさ	(n,abbr) conduct/behaviour/movements/gesture/one's carriage/performance (on stage, etc.)/dance/acting/dance (in kabuki)/dance play
+朗らか	ほがらか	(adj-na,n) brightness/cheerfulness/melodious/(P)
+原因不明	げんいんふめい	(n,adj-no) cause unknown
+埋もれる	うもれる	(v1,vi) to be buried/to be covered/to be hidden
+思わしくない	おもわしくない	(adj-i) disappointing/unsatisfactory/unsuitable
+化膿	かのう	(n,vs,adj-no) suppuration/festering/coming to head
+仰ぐ	あおぐ	(v5g,vt) to look up (at)/to look up (to)/to respect/to revere/to ask for/to seek/to turn to someone/to depend on/to drink/to take/(P)
+洗いざらい	あらいざらい	(adv,n) everything
+見栄	みえ	(n) show/display/appearance/vanity/charm/attraction/(P)
+嘱望	しょくぼう	(n,vs) (having great) expectation/pinning one's hopes on
+病理	びょうり	(n) pathology
+前途	ぜんと	(n) future prospects/outlook/the journey ahead/(P)
+容易	ようい	(adj-na,n) easy/simple/plain/(P)
+賃料	ちんりょう	(n,abbr) rent/rental
+初期投資	しょきとうし	(n) initial investment
+体裁	ていさい	(n) (outward) appearance/(proper) format (e.g. of an essay)/form/style/appearances/decency/show/display/lip-service/insincere words/glib talk/(P)
+思いがけない	おもいがけない	(adj-i) unexpected/contrary to expectations/by chance/casual/(P)
+出世	しゅっせ	(n,vs) success in life/getting ahead/successful career/promotion/climbing the corporate ladder/eminence/(P)
+人当たり	ひとあたり	(n) one's manners/one's attitude
+資質	ししつ	(n) nature/disposition
+抜群	ばつぐん	(n,adj-no,adj-na) preeminence/distinction/extraordinariness/outstanding/excellent/exceptional/surpassing/extraordinary/distinguished/(P)
+ほれる		(v1,vi) to fall in love/to be in love/to be charmed with/to lose one's heart to/(P)
+投機	とうき	(n) speculation/venture/stockjobbing/gambling (on stocks)
+給金	きゅうきん	(n) (one's) pay/wages
+取り仕切る	とりしきる	(v5r,vt) to operate a business/to run a business/to manage all by oneself
+奇態	きたい	(adj-na,n) strange or odd posture or figure
+くどくど		(adv,adv-to,on-mim) tediously/repetitively/(P)
+受胎告知	じゅたいこくち	(n) the Annunciation
+評判	ひょうばん	(n,adj-no) fame/reputation/popularity/rumour (rumor)/talk/(P)
+間柄	あいだがら	(n) relation(ship)/(P)
+動揺	どうよう	(n,vs) shaking/trembling/pitching/rolling/oscillation/disturbance/unrest/agitation/excitement/commotion/turmoil/discomposure/feeling shaken/(P)
+界隈	かいわい	(n,n-suf) neighborhood/neighbourhood/vicinity
+押し込み	おしこみ	(n) burglary/burglar/closet
+しきりに		(adv,uk) frequently/repeatedly/often/incessantly/constantly/strongly/eagerly/(P)
+挙動	きょどう	(n,vs) conduct/behavior/behaviour
+難点	なんてん	(n) fault/weakness/(P)
+指定	してい	(n,vs) designation/specification/assignment/appointment/pointing at/(P)
+初老	しょろう	(n,adj-no) past middle-aged/aging/ageing/elderly/age 40
+風情	ふぜい	(n,suf,hum,derog) taste/elegance/charm/appearance/air/the likes of .../lowly people such as ...
+風采	ふうさい	(n) appearance/air/mien/getup
+屈強	くっきょう	(adj-na,n,adj-no) robust/brawny/muscular/strong/sturdy
+張り上げる	はりあげる	(v1,vt) to raise (one's voice)
+亜硝酸	あしょうさん	(n) nitrous acid
+吸入	きゅうにゅう	(n,vs,adj-no) inhalation
+絶好	ぜっこう	(adj-na,n,adj-no) best/ideal/perfect/(P)
+手間取る	てまどる	(v5r,vi) to meet unexpected difficulties/to take time/to be delayed
+広間	ひろま	(n) hall/saloon/spacious room/guest room
+ぼうっと		(adv,vs,on-mim) doing nothing/being stupefied/flushingly/abstractedly/dazedly/blankly/dreamily/dimly/hazily/faintly/vaguely/indistinctly/with a roar (e.g. flames)/with a whoosh
+実害	じつがい	(n) real harm
+言葉遣い	ことばづかい	(n,vs) speech/expression/wording/language/(P)
+かき乱す	かきみだす	(v5s,vt) to stir up/to disturb
+卓上	たくじょう	(n,adj-no,abbr) desktop/desk-top/tabletop/after-dinner speech
+平坦	へいたん	(adj-na,n) even/flat/level
+嫌悪感	けんおかん	(n) unpleasant feelings (e.g. hatred, disgust, revulsion, fear)/(P)
+きびす		heel
+家路	いえじ	(n) the road home
+共謀者	きょうぼうしゃ	(n) conspirator/accomplice
+計略	けいりゃく	(n,adj-no) plan/trick/plot/stratagem
+僭越	せんえつ	(adj-na) presumptuous/arrogant/audacious/forward/insolent
+四角い	しかくい	(adj-i) square/rectangular/(P)
+日の出	ひので	(n) sunrise/(P)
+化粧着	けしょうぎ	(n) dressing gown
+鎧戸	よろいど	(n) slatted shutter/louver door (window)
+火急	かきゅう	(adj-na,n,adj-no) emergency/urgency
+こめかみ		(n,uk) temple (of the forehead)
+先導	せんどう	(n,vs,adj-no) guidance/leadership
+見た目	みため	(n) appearance/(P)
+対比	たいひ	(n,vs) contrast/comparison/(P)
+寝間着	ねまき	(n) sleep-wear/nightclothes/pyjamas/pajamas/nightgown/nightdress/(P)
+見解	けんかい	(n) opinion/point of view/(P)
+形跡	けいせき	(n) traces/evidence
+死後	しご	(n-adv,n-t) after death
+輸入	ゆにゅう	(n,vs,adj-no) importation/import/introduction/(P)
+代物	しろもの	(n) thing/article/goods/fellow/affair
+藁	わら	(n) straw/(P)
+銘柄	めいがら	(n) brand/make/description/trading name of stocks and securities
+拡大鏡	かくだいきょう	(n) magnifying glass/loupe
+刃物	はもの	(n) edged tool/cutlery
+うやうやしい		(adj-i) respectful/reverent
+感慨深い	かんがいぶかい	(adj-i) deeply emotive/moving
+差し出がましい	さしでがましい	(adj-i) forward/officious/impertinent/intrusive
+最後尾	さいこうび	(n) end of a line (queue)/(P)
+先だって	せんだって	(n-adv,n-t) recently/the other day/(P)
+応用	おうよう	(n,vs) application/put to practical use/(P)
+突起	とっき	(n,vs) protuberance/projection/prominence/bump/boss/process/apophysis
+断罪	だんざい	(n,vs) judgment (of a crime)/conviction/condemnation/beheading/decapitation
+整理箪笥	せいりだんす	(n) bureau/chest of drawers/cabinet
+絞首刑	こうしゅけい	(n) death by hanging
+木材	もくざい	(n) lumber/timber/wood/(P)
+滑車	かっしゃ	(n,adj-no) pulley/block/tackle
+あらまし		(adv,n) outline/gist/abstract/roughly/about
+若干	じゃっかん	(n,adj-no,n-adv) some/few/a number of/a little (bit)/somewhat/to a certain extent/(P)
+不明瞭	ふめいりょう	(adj-na,n) dimness/obscurity/indistinctness/unclear/unintelligible
+名答	めいとう	(n) correct answer
+強盗団	ごうとうだん	(n) band of robbers/gang of thieves
+寝返る	ねがえる	(v5r,vi) to change sides/to double-cross/to betray/(P)
+刑期	けいき	(n) prison term
+出所	しゅっしょ	(n,vs) birthplace/origin/source/authority
+単なる	たんなる	(adj-pn) mere/simple/sheer/(P)
+口実	こうじつ	(n) excuse/pretext/(P)
+素性	すじょう	(n) birth/lineage/parentage/origin/identity/background/history
+蒸気船	じょうきせん	(n) steamship/steamboat/steamer
+沿岸	えんがん	(n,adj-no) coast/shore/littoral/(P)
+消息不明	しょうそくふめい	(n) untraceable/long lost/one's whereabouts being unknown
