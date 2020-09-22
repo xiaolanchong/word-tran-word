@@ -4,13 +4,42 @@
       "Name" : "Пинбол-1973",
       "Description": "Слова из книги „Пинбол 1973“",
       "Language": "ko",
-      "FileName": "Pinball1973.txt"
+      "FileName": "ko/Pinball1973.txt"
    },
    {
       "Id" : 2001,
       "Name" : "Чтение ханчи уровни 1-8",
       "Description": "Чтение ханчи экзамена 한자검정시험, уровни 1-8",
       "Language": "ko",
-      "FileName": "HanjaReading.txt"
+      "FileName": "ko/HanjaReading.txt"
+   },
+   {
+      "Id" : 2002,
+      "Name" : "금테 안경의 비밀",
+      "Description": "The Adventure of the Golden Pince-Nez 금테 안경의 비밀",
+      "Language": "ko",
+      "FileName": "ko/GoldenPince-Nez.txt"
+   },
+   {
+      "Id" : 2003,
+      "Name" : "셜록홈즈 단편소설,  얼럭무늬 끈",
+      "Description": "SpeckledBand ",
+      "Language": "ko",
+      "FileName": "ko/SpeckledBand.txt"
+   },
+   
+   {
+      "Id" : 2100,
+      "Name" : "患者兼同居人",
+      "Description": "Слова из текста https://www.aozora.gr.jp/cards/000009/card50715.html",
+      "Language": "ja",
+      "FileName": "ja/ResidentPatient.txt"
+   },
+   {
+      "Id" : 2101,
+      "Name" : "三枚の学生",
+      "Description": "Слова из текста https://www.aozora.gr.jp/cards/000009/card54915.html",
+      "Language": "ja",
+      "FileName": "ja/3Students.txt"
    }
 ]

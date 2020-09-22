@@ -174,7 +174,7 @@ class LocalUser {
            id: wordId,
            word: item[0],
            meaning: item[1],
-           extra: item[2],
+           extra: item[2] ? item[2]: undefined,
            score: Math.floor(transScore) // + getProperty(`word`, wordId, `word_score`) ?? 0) / 2,
          }
       }); 
@@ -211,7 +211,7 @@ class LocalUser {
            break
          case 3:
            newRecord.word = parts[0]
-           newRecord.extra = parts[1]
+           newRecord.extra = parts[1] ? parts[1]: undefined
            newRecord.meaning = parts[2]
            break
          default:
