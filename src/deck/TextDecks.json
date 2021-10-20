@@ -27,6 +27,41 @@
       "Language": "ko",
       "FileName": "ko/SpeckledBand.txt"
    },
+   {
+      "Id" : 2004,
+      "Name" : "6К самых частых слов из ханчи (начальный-средний)",
+      "Description": "Easy Korean словарь - https://github.com/garfieldnate/kengdic/blob/master/ezcorean_6000.sql",
+      "Language": "ko",
+      "FileName": "ko/6k_most_common_hanja_words_1.txt"
+   },
+   {
+      "Id" : 2005,
+      "Name" : "6К самых частых слов из ханчи (продвинутый)",
+      "Description": "Easy Korean словарь - https://github.com/garfieldnate/kengdic/blob/master/ezcorean_6000.sql",
+      "Language": "ko",
+      "FileName": "ko/6k_most_common_hanja_words_2.txt"
+   },
+   {
+      "Id" : 2006,
+      "Name" : "6К самых частых слов без ханчи (сущ)",
+      "Description": "Easy Korean словарь - https://github.com/garfieldnate/kengdic/blob/master/ezcorean_6000.sql",
+      "Language": "ko",
+      "FileName": "ko/6k_most_common_nonhanja_words_noun.txt"
+   },
+   {
+      "Id" : 2007,
+      "Name" : "6К самых частых слов без ханчи (глаголы)",
+      "Description": "Easy Korean словарь - https://github.com/garfieldnate/kengdic/blob/master/ezcorean_6000.sql",
+      "Language": "ko",
+      "FileName": "ko/6k_most_common_nonhanja_words_verb.txt"
+   },
+   {
+      "Id" : 2008,
+      "Name" : "6К самых частых слов без ханчи (прил и наречия)",
+      "Description": "Easy Korean словарь - https://github.com/garfieldnate/kengdic/blob/master/ezcorean_6000.sql",
+      "Language": "ko",
+      "FileName": "ko/6k_most_common_nonhanja_words_adjadv.txt"
+   },
    
    {
       "Id" : 2100,

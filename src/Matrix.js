@@ -231,7 +231,7 @@ function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode,
 const KanaMode = ({onChange}) => (
     <div className="custom-control custom-checkbox mb-3">
       <input type="checkbox" className="custom-control-input" id="kanaModeCheck" name="kanaMode" onChange={(e) => onChange(e.target.checked)} />
-      <label className="custom-control-label" htmlFor="kanaModeCheck">Отображать слова каной (理解 → りかい)</label>
+      <label className="custom-control-label" htmlFor="kanaModeCheck">Отображать кандзи/ханьцзы/ханчу каной/пиньинем/хангылем, если колода поддерживает (理解 → りかい/lǐ​jiě/이해)</label>
     </div>
 );
 
@@ -314,7 +314,7 @@ const Page = (props) =>
 
 const GlobalControls = ({deck, setInitialMode, initialMode, 
                          setKanaMode, setOnlyForgottenWords, }) => {
-  const supportsExtraMode = [ 'ja', 'cn' ].includes(deck.language) // kana or pinyin
+  const supportsExtraMode = [ 'ja', 'cn', 'ko' ].includes(deck.language) // kana or pinyin
   return (
   <>
      <LanguageSelector language={deck.language} />

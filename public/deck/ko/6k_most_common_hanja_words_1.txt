@@ -1,0 +1,1374 @@
+가수	歌手	Singer
+가족	家族	Family
+간호사	看護師	Nurse
+감기	感氣	A cold
+감사	感謝	Thanks, (v) To thank
+강	江	River
+개	個	Unit or  piece
+개월	個月	Each and every month
+건강	健康	Health
+건강하다	健康-	To be healthy
+건물	建物	Building
+검은색	-色	Black or  dark
+결혼	結婚	Marriage, (v) Get married
+결혼식	結婚式	Wedding
+경찰	警察	The police
+경찰관	警察官	a policeman
+경찰서	警察署	A police station
+경치	景致	A scene or  scenery
+계란	鷄卵	An egg
+계속	繼續	Continuously
+계절	季節	Season
+계획	計劃	A plan or  a project
+고등학교	高等學校	A senior high school
+고등학생	高等學生	High school student
+고향	故鄕	Hometown
+공부	工夫	Study, (v) To study
+공원	公園	Park
+공책	空冊	Notebook for taking notes and studying
+공항	空港	Airport
+공휴일	公休日	A legal holiday
+과	課	A lesson or  a section or  a department
+과자	菓子	A snack or  pastries or  candy
+교과서	敎科書	Textbook
+교수	敎授	Teaching or  instruction
+교실	敎室	Classroom
+교통	交通	Traffic or  transportation
+교회	敎會	Preach or  moral instruction
+구	九	num
+구십	九十	90
+구월	九月	September
+군인	軍人	Sb in the military
+권	卷	A volume or  a book
+그녀	-女	She
+극장	劇場	Theater or  playhouse
+근처	近處	Nearby or  the vicinity
+금요일	金曜日	Friday
+급	級	Class or  grade or  rank
+기분	氣分	Mood
+기숙사	寄宿舍	A hostel or  residence hall
+기차	汽車	A train
+남녀	男女	Man and woman
+남동생	男-	Younger brother
+남자	男子	Boy
+남쪽	南-	South side
+남편	男便	Husband
+남학생	男學生	Male student
+내년	來年	Next year
+내일	來日	Tomorrow
+냉면	冷麵	Cold noodles soup
+냉장고	冷藏庫	Freezer
+년	年	Year
+노란색	-色	Yellow
+단어	單語	Word
+달력	-曆	A calendar
+대답	對答	An answer
+대답하다	對答-	To answer, reply
+대사관	大使館	Embassy
+대학	大學	University
+대학교	大學校	University
+대학생	大學生	University student
+대화	對話	Conversation
+댁	宅	You and your family
+도서관	圖書館	Library
+도시	都市	City
+도착	到着	Arrival
+도착하다	到着-	To arrive
+독일	獨逸	Germany
+만	萬	10000
+매일	每日	Every day
+맥주	麥酒	Beer
+명	名	Person counter
+모자	帽子	A hat
+목요일	木曜日	Thursday
+목욕	沐浴	A bath
+문	門	Door
+문제	問題	question,problem
+물건	物件	A thing
+물론	勿論	Of course
+미안하다	未安-	To be sorry
+박물관	博物館	Museum
+반	半	Half
+반	班	Group, company, party
+발음	發音	Pronunciation
+방	房	A room
+방학	放學	School holidays
+백	百	One hundred
+백화점	百貨店	Department store
+번	番	Number, how many times
+번호	番號	A number
+병	甁	A bottle
+병	病	Sickness
+병원	病院	Hospital
+보통	普通	The normal
+복잡하다	複雜-	Be complicated
+부모	父母	Parents
+부부	夫婦	Man and wife
+부인	夫人	A woman
+북쪽	北-	The north direction
+비행기	飛行機	An airplane
+빨간색	-色	deep-red,crimson
+사	四	four,the fourth
+사과	沙果	An apple
+사무실	事務室	Office
+사십	四十	40
+사용하다	使用-	To use
+사월	四月	April
+사장	社長	Company boss
+사전	辭典	Dictionary
+사진	寫眞	Picture
+사탕	沙糖	Sugar
+산	山	A mountain
+산책	散策	A walk,stroll
+삼	三	Three
+삼십	三十	30
+삼월	三月	March
+색	色	Color
+색깔	色-	Color
+생선	生鮮	Raw fish
+생일	生日	A birthday
+생활	生活	lifestyle,livelihood
+서점	書店	A bookstore
+서쪽	西-	The west
+선물	膳物	A present,gift
+선물하다	膳物-	Give a gift
+선생	先生	Teacher
+설명	說明	Explanation
+설명하다	說明-	To explain
+설탕	雪糖	Sugar
+세	歲	Age in years
+세수	洗手	Hand-washing
+세탁기	洗濯機	Washing machine
+소개하다	紹介-	To introduce,present
+소풍	逍風	Picnic
+수건	手巾	Handkerchief
+수업	授業	school,teaching
+수영	水泳	Swimming
+수영장	水泳場	Swimming pool
+수요일	水曜日	Wednesday
+숙제	宿題	Homework
+시	市	City
+시	時	Time
+시간	時間	a Length of time (한시간 동안)
+시간	時間	Time
+시계	時計	clock, timekeeper, timepiece
+시월	十月	October
+시작	始作	The beginning
+시작되다	始作-	To begin,start
+시작하다	始作-	To start,begin
+시장	市場	market,fair
+시험	試驗	A test
+식당	食堂	Restaurant
+식사	食事	A meal
+식사하다	食事-	To eat a meal
+식탁	食卓	Dinner table
+신문	新聞	A newspaper
+실례	失禮	rudeness,impolite
+실례하다	失禮-	To be impolite
+십	十	10
+십이월	十二月	December
+십일월	十一月	November
+씨	氏	~ Mr.
+안경	眼鏡	Glasses
+안녕	安寧	hello/goodbye
+안녕하다	安寧-	To say hello
+안녕히	安寧-	Peacefully
+야구	野球	Baseball
+약	藥	Medicine
+약국	藥局	Pharmacy
+약속	約束	A promise
+약속하다	約束-	To make a promise
+양말	洋襪	A sock
+양복	洋服	Western European style clothing
+여권	旅券	A passport
+여동생	女同生	Younger sister
+여자	女子	woman,female
+여학생	女學生	Female student
+여행	旅行	Trip
+여행하다	旅行-	To travel
+역	驛	A railroad station/depot
+역사	歷史	History
+연습	練習	practice,exercise
+연습하다	練習-	To practice,exercise
+연필	鉛筆	Pencil
+열심히	熱心-	Enthusiastically,with zeal
+영국	英國	England
+영어	英語	The english language
+영화	映畵	A movie
+오	五	Five
+오십	五十	Fifty
+오월	五月	May
+오전	午前	Morning
+오후	午後	The afternoon
+외국	外國	A foreign country
+외국어	外國語	A foreign language; sometimes, only means English
+외국인	外國人	A foreigner, a foreign national
+요리	料理	Cooking
+요리하다	料理-	To cook (food)
+요일	曜日	A day of the week not the weekend
+우산	雨傘	An umbrealla
+우유	牛乳	Milk
+우체국	郵遞局	A post office
+운동	運動	Motion, movement
+운동장	運動場	Stadium, playground
+운동하다	運動-	To do exercise
+운동화	運動靴	Sports shoes
+운전	運轉	Driving
+운전하다	運轉-	To drive
+월	月	A month
+월요일	月曜日	Monday
+위험	危險	Danger
+위험하다	危險-	To be dangerous
+유명하다	有名-	To be famous
+유월	六月	June
+육	六	The number six
+육십	六十	Sixty
+은행	銀行	A bank
+음식	飮食	Food
+음악	音樂	Music
+의사	醫師	A doctor, a physician
+의자	椅子	A chair
+이	二	Two
+이번	-番	This time
+이십	二十	Twenty
+이월	二月	February
+이해하다	理解-	To understand
+인사	人事	Greetings
+인사	人士	People, men of society
+인사하다	人事-	To greet, say hello
+인천	仁川	Incheon city
+일	一	One
+일본어	日本語	Japanese
+일요일	日曜日	Sunday
+일월	一月	January
+일주일	一週日	One whole day
+자동차	自動車	Car
+자전거	自轉車	Bicycle
+작년	昨年	Last year
+잔	盞	A cup, wine glass
+잠시	暫時	For a little while
+잡지	雜誌	A magazine
+장	張	One piece of sth flat
+장미	薔薇	A rose
+장소	場所	Place
+전	前	Before
+전화	電話	Telephone
+전화번호	電話番號	Telephone number
+전화하다	電話-	To call
+점심	點心	Lunch
+점심시간	點心時間	Lunchtime
+정류장	停留場	stop,a station,bus-stop
+정말	正-	Really
+제일	第一	The first
+졸업	卒業	Graduation
+졸업하다	卒業-	To graduate
+죄송하다	罪悚-	regret,be sorry for
+주	週	One week
+주말	週末	Weekend
+주소	住所	An address
+주인	主人	The head of a family,the owner
+준비	準備	Preparation
+준비하다	準備-	To prepare
+중국	中國	China
+중국어	中國語	Chinese
+중요하다	重要-	To be important,weighty
+중학교	中學校	Middle school
+중학생	中學生	Middle school student
+지갑	紙匣	A purse,wallet
+지금	只今	Now
+지난주	-週	Last week
+지도	地圖	Map, atlas
+지하	地下	Underground
+지하철	地下鐵	Subway
+질문	質問	A question, a query
+질문하다	質問-	Ask a person a question
+차	茶	Tea
+차	車	A vehicle, train/auto car
+창문	窓門	A window
+책	冊	A book
+책상	冊床	On the desk
+천	千	Thousand
+청바지	靑-	Blue jeans
+청소	淸掃	Cleaning
+청소하다	淸掃-	To clean
+초대	招待	An invitation
+초대하다	招待-	To invide
+초등학교	初等學校	Elementary school
+축구	蹴球	Football
+축하하다	祝賀-	To Congratulate sb
+출발하다	出發-	To depart, leave
+취미	趣味	Hobby
+층	層	floor,grade,class
+치약	齒藥	Toothpaste
+친구	親舊	A friend
+친절하다	親切-	To be kind, to be nice
+칠	七	Seven
+칠십	七十	Seventy
+칠월	七月	Month of July
+칠판	漆板	The blackboard
+침대	寢臺	A bed
+칫솔	齒-	A toothbrush
+태권도	跆拳道	Tae kwon do
+토요일	土曜日	Saturday
+파란색	-色	Blue
+팔	八	Eight
+팔십	八十	80
+팔월	八月	August
+편지	便紙	Letter
+포도	葡萄	grape(s)
+표	票	A marker, indication
+피곤하다	疲困-	To be very tired, exhausted
+필요	必要	Need, requirement,necessity
+필요하다	必要-	To need
+학교	學校	School
+학년	學年	A school year
+학생	學生	Student
+한국말	韓國-	Korean (language)
+한국어	韓國語	Korean (language)
+한번	-番	Once
+한복	韓服	Korean traditional clothing
+한자	漢字	Korean character, derived from chinese
+항상	恒常	Always
+형	兄	An elder brother
+호	號	A pen name, a title; a number, an issue
+화요일	火曜日	Tuesday
+화장실	化粧室	Bathroom
+환자	患者	A patient
+회사	會社	A company
+회의	會議	A meeting, a conference
+후	後	After
+휴일	休日	A day off of work, a holiday
+휴지	休紙	Toilet paper
+휴지통	休紙桶	Waste paper basket
+흰색	-色	gray,ash color
+가격	價格	Price
+가구	家具	Furniture
+가능성	可能性	Possibility
+가능하다	可能-	To be possible
+가요	歌謠	A song
+가정	家庭	Famly
+가짜	假-	Fake
+각	各	Each or  every
+각각	各各	Each and every
+각국	各國	Each country
+각자	各自	Each one or  every one
+각종	各種	All sorts or  varieties
+간	間	The interval between
+간단하다	簡單-	To be simple
+간단히	簡單-	Simply speaking
+간식	間食	Snack
+간장	-醬	Soy sauce
+갈비탕	-湯	Beef-rib soup
+갈색	褐色	Brown
+감동	感動	Agitate or  stir up the emotions
+감상	鑑賞	Appreciation
+감상하다	鑑賞-	To show appreciation
+감정	感情	Feelings
+강당	講堂	A lecture hall
+강도	强盜	A robber or  burglar
+강물	江-	River water
+강제	强制	Compulsion or  coercion
+강조하다	强調-	Place empasis upon
+강하다	强-	To be strong or  powerful
+개발하다	開發-	Develop or  exploit or  open up to development
+개인	個人	Private or  individual
+개인적	個人的	Private or  personal
+거실	居室	Living room
+건너편	-便	The opposite side
+건축	建築	Construction or  building or  erection
+검사	檢査	Investigation or  inspection or  examination or  audit
+검정색	-色	черный цвет
+겁	怯	Fear or  fright
+결과	結果	Result
+결국	結局	After all or  in the end
+결심하다	決心-	To resolve or  be determined
+결정	決定	A decision or  determination
+결정되다	決定-	To become decided
+결정하다	決定-	To decide
+경기	競技	Race or  match or  contest
+경기장	競技場	Sports stadium or  a sports field
+경상도	慶尙道	Kyung-San-Do province (ulsan or kyungju)
+경영	經營	Management or  administration
+경우	境遇	A case or  an instance
+경제	經濟	Economy
+경제적	經濟的	Economical
+경험	經驗	Experience or  undergo or  suffer
+경험하다	經驗-	To experience or  go through
+계단	階段	A staircase or  a set of stairs
+계산	計算	Calculation
+계산기	計算器	Calculator
+계산하다	計算-	To calculate
+계속되다	繼續-	To continue
+계속하다	繼續-	To continue
+계약	契約	Contract
+계획하다	計劃-	Plan or  make a project
+고객	顧客	Customer
+고교	高校	High school
+고급	高級	High rank or  first class
+고려하다	考慮-	Regard or  respect
+고모	姑母	A paternal aunt
+고모부	姑母夫	The husband of one’s paternal aunt
+고민	苦悶	Worry or  anguish
+고민하다	苦悶-	Be in anguish or  worried
+고생	苦生	A hard life or  privation
+고생하다	苦生-	To suffer or  to have trials ; to do something you don\\'t want to do, 하고 싶자 않은 것
+고속	高速	High speed
+고속도로	高速道路	Freeway or  highway with no street lights
+고속버스	高速-	Bus for the freeway
+고장	故障	Broken
+고추장	-醬	Red pepper paste
+고통	苦痛	Suffering or  agony
+골프장	-場	Golf course
+공간	空間	Space or  room
+공기	空氣	Air
+공동	共同	Association or  union or  collaboration
+공무원	公務員	Public servant
+공사	工事	Construction work or  engineering work
+공연	公演	A public performance
+공장	工場	Construction site
+공중전화	公衆電話	A public payphone
+공짜	空-	Free
+공항버스	空港-	Bus to the airport
+과거	過去	The past
+과목	科目	A subject or  a lesson
+과장	課長	The department/section head
+과제	課題	A subject or  a thesis or  homework; an exercise/a problem
+과학	科學	Science
+과학자	科學者	Scientist
+과학적	科學的	Scientifically
+관객	觀客	Spectator
+관계	關係	Connection or  relation
+관광	觀光	Sightseeing or  tourism
+관광객	觀光客	A tourist
+관광지	觀光地	Tourist area
+관련	關聯	Relation or  connection or  reference
+관련되다	關聯-	Be connected or  related to
+관련하다	關聯-	To be related to or  connected to
+관리	管理	Management or  administration
+관심	關心	Concern or  interest
+관찰하다	觀察-	Observe or  view or  watch
+관하다	關-	Refer to or  be about
+광고	廣告	Advertisement
+굉장히	宏壯-	Very very much or  greatly
+교류	交流	Interchange (cultural) ; alternating current (electrical)
+교문	校門	A school gate
+교육	敎育	Education
+교통사고	交通事故	Traffic accident
+교포	僑胞	A Korean living abroad
+교환	交換	An exchange
+구체적	具體的	Concretely
+구하다	救-	Rescue a person
+구하다	求-	1) To buy or  purchase or  2) look for or  seek or  want
+국가	國家	A state or  a nation
+국기	國旗	The national flag
+국내	國內	Inside the country
+국립	國立	Government established
+국민	國民	The people or  a nationality
+국어	國語	1) The national language or  2) Korean
+국제	國際	International
+국회의원	國會議員	A member of the national Assembly
+군	君	Mr.
+군	軍	An army
+군대	軍隊	Troops or  an army
+권투	拳鬪	Boxing or  K1
+권하다	勸-	1) advise or  persuade 2) recommend
+귀국	歸國	Returning to one’s home country
+귀국하다	歸國-	To return to one’s home country
+규칙	規則	Rules or  regulations
+규칙적	規則的	Be regular or  systematic
+그중	-中	Among the rest of them
+근로자	勤勞者	Laborer
+근무	勤務	Duty or  service or  work
+근무하다	勤務-	Work or  labor
+글자	-字	A letter or  a character
+금	金	Gold
+금년	今年	This year
+금방	今方	Just now or  a moment ago
+금연	禁煙	Prohibition of smoking
+금지	禁止	Forbidden or  prohibitted
+금지하다	禁止-	To restrain or prohibit
+급하다	急-	Be urgent or  pressing or  iminent
+긍정적	肯定的	Affirmation or  admission
+기간	期間	A period or  a time or
+기계	機械	An instrument or  a machine
+기대	期待	Expectation
+기대하다	期待-	To expect or look forward to
+기도	祈禱	A prayer
+기록하다	記錄-	To record and write down
+기본	基本	A foundation
+기사	技士	Technician
+기사	記事	An article or  an account
+기술	技術	Art or  technique or  ability
+기억	記憶	A memory
+기억나다	記憶-	To memorize
+기억하다	記憶-	To recall or  remember
+기온	氣溫	Temperature
+기자	記者	A journalist
+기준	基準	A standard or basis
+기초	基礎	The foundation
+기회	機會	An opportunity
+긴장	緊張	Tension
+긴장하다	緊張-	To become tense
+까만색	-色	Black
+낙엽	落葉	Fallen dead leaves
+남	南	The south
+남	男	A man
+남매	男妹	Brother and sister
+남성	男性	Male
+내용	內容	Contents
+내지	乃至	From A to B
+년대	年代	Year
+년도	年度	Year
+노동자	勞動者	Laborer, worker
+노래방	-房	Singing room
+노력	努力	Effort
+노력하다	努力-	To try hard, strive
+노인	老人	Old person
+녹색	綠色	Green
+녹음	錄音	Recording
+녹음하다	錄音-	To record
+녹차	綠茶	Green tea
+논문	論文	Dissertations , an academic paper (these are 2 separate meanings)
+논의하다	論議-	Discussion
+농구	籠球	Basketball
+농담	弄談	A joke
+농사	農事	Farming
+농업	農業	Agriculture
+농촌	農村	A farm village
+능력	能力	Ability, capability, how much and how well
+다수	多數	A great number
+다양하다	多樣-	To be various, diverse
+다행히	多幸-	Fortunately
+단	單	Only one, alone
+단순하다	單純-	Be simple-minded
+단순히	單純-	Simply
+단점	短點	A weak point
+단지	但只	Simple, merely
+단지	團地	A public apt complex
+단체	團體	A corps, a group
+담당하다	擔當-	Take charge of
+담임	擔任	Charge, duty
+답장	答狀	An answer
+답하다	答-	Answer, reply
+당신	當身	Formal you
+당연하다	當然-	Be natural, be no wonder
+당연히	當然-	Of course
+당장	當場	On the spot, immediately
+당황하다	唐慌-	Be confused
+대	對	1) Versus 2)a pair, counterpart
+대구	大邱	Daegu city
+대기업	大企業	Big enterprise
+대도시	大都市	Large city
+대문	大門	A big gate
+대부분	大部分	Most
+대신	代身	Instead of
+대전	大田	Daejon city
+대중	大衆	The masses
+대중교통	大衆交通	Mass transportation
+대중문화	大衆文化	Pop culture
+대통령	大統領	The president
+대표	代表	Representative
+대표적	代表的	Representative
+대하다	對-	Face, confront
+대학교수	大學敎授	University professor
+대학원	大學院	Graduate school
+대화하다	對話-	To converse
+대회	大會	A great meeting
+덕분	德分	Indebtedness
+도구	道具	Tool, instrument
+도로	道路	A road, way
+도망가다	逃亡-	Make a go for it, escape
+도자기	陶瓷器	Porcelain
+도중	途中	On the way
+도쿄(동경)	東京	Tokyo
+독서	讀書	Reading
+독일어	獨逸語	German
+뒷산	-山	The back side of a mountain
+만	滿	Just, full
+만두	饅頭	Chinese dumplings
+만약	萬若	If
+만일	萬一	If, suppose
+만족하다	滿足-	To be content
+만화	漫畵	Cartoons
+말	末	End
+맞은편	-便	The other side of  THIS IS ONE WORD
+매년	每年	Every year
+매력	魅力	fascination,charm, bewitchery
+명령	命令	An order,command
+명절	名節	Festival days
+명함	名銜	Name card
+모양	模樣	signs,indications
+모양	模樣	A shape, form
+목사	牧師	A pastor
+목욕탕	沐浴湯	A bathhouse
+목적	目的	goal,purpose
+목표	目標	goal,object
+무시하다	無視-	disregard,ignore ; to be defiant and fail to observe
+무역	貿易	Trade
+무용	舞踊	dancing,a dance
+무조건	無條件	Unconditional
+문장	文章	writing,composition
+문제점	問題點	The point at issue
+문학	文學	Literature
+문화	文化	culture
+미래	未來	Future
+미소	微笑	Smile
+미술	美術	art,the fine arts
+미술관	美術館	Fine arts museum
+미인	美人	A beautiful girl
+민족	民族	race,nation,people
+박사	博士	Doctor
+박수	拍手	Applause
+반대	反對	Opposite and being opposed to (objecting to)
+반대하다	反對-	Be opposed to
+반복하다	反復-	To repeat
+반장	班長	Squad leader
+반지	半指	Ring
+반찬	飯饌	Sie dishes
+반하다	反-	To be contrary to
+발견	發見	Discovery
+발견되다	發見-	Be discovered
+발견하다	發見-	To discover
+발달	發達	Development, growth
+발달하다	發達-	To advance
+발생	發生	1) Birth 2) development
+발생하다	發生-	Originate, come from
+발음하다	發音-	Pronounce
+발전	發展	Development
+발전하다	發展-	To develop, grow
+발표	發表	Announcement
+발표하다	發表-	To announce
+밤중	-中	Midnight
+방금	方今	Just now
+방문	房門	A door of a room
+방문	訪問	A visit
+방문하다	訪問-	To visit
+방법	方法	Way, method
+방송	放送	Broadcast
+방송국	放送局	Broadcasting station
+방향	方向	Direction
+배경	背景	Background
+배구	排球	Volleyball
+배달	配達	Delivery
+배우	俳優	Actor
+번역	飜譯	Translation
+번째	番-	How many times
+법	法	A way, a method
+법	法	A law, the law
+벽	壁	A wall
+변하다	變-	Change
+변호사	辯護士	Lawyer
+변화	變化	Change, transformation
+변화하다	變化-	To change,vary
+별	別	Classified by
+별로	別-	Especially, particularly
+병들다	病-	Get sick
+보고	報告	report,information
+보고서	報告書	Report
+보관하다	保管-	Keep in one’s custody
+보통	普通	Usually
+보험	保險	guarantee,insurance
+보호	保護	protection,shelter
+복도	複道	A corridor
+복사	複寫	Reproduction
+복사하다	複寫-	reproduce,copy
+복습	復習	Reviewing
+복습하다	復習-	To review
+본래	本來	originally,primarily
+봉지	封紙	Bag
+봉투	封套	Envelope
+부	部	A department, a part
+부근	附近	neighborhood,vicinity
+부동산	不動産	Real estate
+부분	部分	part,portion
+부자	富者	A rich person
+부작용	副作用	reaction,side effect
+부잣집	富者-	Rich man’s house
+부장	部長	Head of a department
+부족	不足	lack,want (scarcity, insufficiency)
+부족	部族	A tribe
+부족하다	不足-	Be short of, lack
+부처	部處	Buddha
+부탁	付託	request,favor
+부탁하다	付託-	Ask sb a favor
+북	北	North
+분명	分明	Obviousness
+분명히	分明-	Obviously
+분석하다	分析-	To analyze
+분위기	雰圍氣	atmosphere,surroundings
+불가능하다	不可能-	Impossible
+불교	佛敎	Buddhism
+불만	不滿	Dissatisfaction
+불안	不安	uneasiness,anxiety
+불안하다	不安-	To be uneasy, anxious
+불편하다	不便-	To be unpleasant
+불행하다	不幸-	Do not permit
+비교	比較	A comparison
+비교적	比較的	Comparatively
+비교하다	比較-	To compare
+비닐봉지	-封紙	Plastic bag
+비밀	秘密	A secret
+비서	秘書	Secretary
+비용	費用	Expense
+비판하다	批判-	To criticize
+사계절	四季節	The four seasons
+사고	事故	An accident
+사과하다	謝過-	To apologize
+사무	事務	Office work
+사물	事物	objects,things
+사실	事實	Actually, really
+사실	事實	The truth, a fact
+사업	事業	Business
+사용	使用	use,emply
+사용되다	使用-	Be used, be employed
+사용자	使用者	A user,consumer,employer
+사원	社員	Company employee
+사자	獅子	A lion
+사진기	寫眞機	Camera
+사촌	四寸	a cousin
+사회	社會	culture,society
+사회적	社會的	Socially
+산소	酸素	Oxygen
+산속	山-	The heart of a mountain
+삼촌	三寸	An uncle (usually on the father\\'s side)(외삼촌 a brother of the wife, an uncle on the  mother\\'s side)
+상	賞	A prize
+상대	相對	counterpart,companion,rival
+상대방	相對方	Conversation partner
+상상	想像	Imagination
+상상하다	想像-	Imagine
+상자	箱子	A box,case
+상처	傷處	Wound
+상품	商品	Product
+상하다	傷-	damage,injure
+생신	生辰	A birthday
+생활하다	生活-	To live, make a living
+생활환경	生活環境	Life environment
+서류	書類	documents,papers
+서양	西洋	The Western countries
+석유	石油	Petroleum
+선배	先輩	one’s senior
+선수	選手	An athlete
+선택	選擇	A choice
+선택하다	選擇-	To choose
+선풍기	扇風機	A fan
+설렁탕	-湯	Beef soup with rice
+섭씨	攝氏	Celsius
+성	姓	A family name,surname
+성격	性格	Personality ; character, nature
+성공	成功	success,achievement
+성공하다	成功-	To succeed
+성별	性別	Sex distinction
+성인	成人	An adult
+성적	成績	A result,grade
+성함	姓銜	Your (his) esteemed name
+세계	世界	World
+세계적	世界的	International
+세금	稅金	Tax
+세기	世紀	Century
+세상	世上	The world,society
+세탁	洗濯	Laundry
+세탁소	洗濯所	Laundromat
+소개	紹介	Introduction
+소개되다	紹介-	To be introduced,presented
+소녀	少女	A young girl
+소년	少年	A boy
+소문	所聞	A rumor
+소문나다	所聞-	A rumor starts
+소비자	消費者	A consumer
+소설	小說	A novel, fiction story
+소설가	小說家	Novelist
+소식	消息	News, information
+소용없다	所用-	To be useless
+소주	燒酒	Korean sake
+소포	小包	A parcel,package
+속도	速度	Speed
+속하다	屬-	Belong to, be affiliated with
+손녀	孫女	Granddaughter
+손수건	-手巾	A handkerchief
+손자	孫子	Grandson
+솔직하다	率直-	frankness,candidness
+솔직히	率直-	frankly,candidly
+송편	松-	Rice cake steemed over pine needles
+수년	數年	Several years
+수돗물	水道-	Tap water
+수많다	數-	Many and many
+수상	首相	The prime minister
+수술	手術	Surgery
+수염	鬚髥	Beard
+수입	收入	Income
+수입	輸入	Importing sth
+수입하다	輸入-	To import
+수출	輸出	Exporting sth
+수출하다	輸出-	To export
+수표	手票	A check
+수학	修學	Pursuit of knowledge
+수학	數學	Mathematics
+수화기	受話器	Telephone receiver
+숙소	宿所	one’s address
+순간	瞬間	A moment,a second
+순서	順序	sytem,order,sequence
+순수하다	純粹-	To be pure
+술병	-甁	A bottle of alcohol
+술잔	-盞	A glass for alcohol
+숫자	數字	A figure,number
+스키장	~場	Place to ski
+습관	習慣	Habit
+승용차	乘用車	A passenger car
+시내	市內	The city
+시내버스	市內~	Inner-city bus
+시대	時代	An age,period
+시도하다	試圖-	To try,attempt
+시민	市民	Residents of a city
+시부모	媤父母	one’s husband’s parents
+시설	施設	establishment,institution
+시아버지	媤-	one’s husband’s father
+시어머니	媤-	one’s husband’s mother
+시외	市外	Outside the city, suberbs
+시인	詩人	A poet
+시절	時節	season,time,occasion
+시집	媤-	one’s husband’s home/family
+시청	市廳	City hall
+시청자	視聽者	TV audience member
+식	式	form,style
+식구	食口	Members of a family, your immediate family members (those you live with, preferably)
+식물	植物	food,provisions
+식빵	食-	Bread
+식용유	食用油	Food oil
+식초	食醋	Vinegar
+식품	食品	Groceries
+신고	申告	A statement,declaration
+신랑	新郞	A bridegroom
+신문사	新聞社	Newspaper company
+신문지	新聞紙	Newspaper paper
+신부	新婦	Bride
+신선하다	新鮮-	Fresh
+신용	信用	confidence,trust
+신입생	新入生	A new student
+신청	申請	application,request
+신체	身體	The body
+신호	信號	A signal,signaling
+신호등	信號燈	Signal light, blinker
+신혼부부	新婚夫婦	Newlyweds
+신혼여행	新婚旅行	the honeymoon (the trip after the wedding)
+실내	室內	In the room
+실력	實力	one’s real ability,talent
+실수	失手	A mistake
+실수하다	失手-	To make a mistake
+실패	失敗	Failure
+실패하다	失敗-	To fail
+심각하다	深刻-	seriousness,gravity
+심리	心理	A mental state
+심하다	甚-	To be extreme,intense
+심해지다	甚-	Become deep and serious
+쓰레기통	-桶	Garbage can
+아래층	-層	Lower floor
+악기	樂器	Musical instrument
+악수	握手	Handshake
+안내하다	案內-	To lead the way
+안방	-房	The inner room
+안전	安全	Safety
+안전하다	安全-	To be safe
+안주	按酒	Appetizers for alcohol
+암	癌	Cancer
+애	아이	A baby, or a slightly derogative word for person
+애인	愛人	A lover
+야외	野外	The fields, the outskirts
+야채	野菜	Vegetables
+약간	若干	Some, a little
+약간	若干	Somewhat
+약하다	弱-	To be weak
+양	量	quantity,volume
+양배추	洋-	Cabbage
+양보하다	讓步-	To make a concession, recede
+양쪽	兩-	Both sides
+양파	洋-	An onion
+어색하다	語塞-	To be awkward, shy with words, speechless
+억	億	One hundred million
+업무	業務	Buisness, duty
+여	女	A woman, a girl
+여고생	女高生	Female high school student
+여관	旅館	A hotel, an inn
+여대생	女大生	Female college student
+여성	女性	Female
+여유	餘裕	reserve,surplus
+여직원	女職員	Female employee
+여행사	旅行社	Travel agency
+역사가	歷史家	Historian
+역사적	歷史的	Historical
+역시	亦是	As expected, likewise
+역할	役割	A part, a role
+연결되다	連結-	Connect, attach
+연결하다	連結-	Connect, attach
+연구	硏究	Research
+연구소	硏究所	A reasearch institute
+연구자	硏究者	Researcher
+연구하다	硏究-	To research, investigate
+연기	演技	performance,acting
+연기	煙氣	Smoke, fume
+연락처	連絡處	a way to make contact (usually means a phone number)
+연락하다	連絡-	To contact, get in touch with
+연말	年末	The end, close of the year
+연세	年歲	Age, years of age
+연하다	軟-	Tender, soft, mild
+연휴	連休	Consecutive holidays
+열	熱	Heat
+열차	列車	Train
+염려하다	念慮-	To worry, be anxious about
+엽서	葉書	A postcard
+영상	零上	Above zero
+영원하다	永遠-	To be eternal
+영원히	永遠-	Forever
+영하	零下	Below zero
+옆방	-房	The room next door
+예	例	Example
+예금	預金	Deposit money
+예매하다	豫買-	Advance purchase
+예상	豫想	Expectation, anticipation; forecast, preconception, prenotion
+예술	藝術	Art, an art
+예술가	藝術家	An artist
+예약	豫約	Pre-engagement, reservation
+예절	禮節	propriety,decorum
+예정	豫定	A program, schedule
+오래전	-前	Since a long time before
+온도	溫度	Temperature
+완벽하다	完璧-	Perfect
+완전히	完全-	completely,perfectly
+왕	王	King
+외	外	Except, save for
+외교	外交	Diplomacy
+외교관	外交官	A diplomat
+외삼촌	外三寸	An uncle on one’s mother’s side
+외출	外出	Going out, an outing
+외출하다	外出-	To go out (of doors)
+외할머니	外-	A maternal grandmother
+요구하다	要求-	To demand,claim,request
+요금	料金	A rate, a fare
+요청	要請	request,demand,claim
+욕실	浴室	A bathroom,a bath
+욕심	欲心	Greed, selfishness
+용돈	用-	Pocket money, money for expenses
+우선	于先	First of all, before everything
+우수하다	優秀-	to be superior,excellent
+우승	優勝	First place
+우승하다	優勝-	To take first place
+우연히	偶然-	accidentally,by chance
+우울하다	憂鬱-	To be melancholy, gloomy
+우표	郵票	A postage stamp
+운	運	Fortune, luck, fate
+운동복	運動服	Exercise clothes
+운전기사	運轉技士	The driver
+운전자	運轉者	The driver
+원래	元來	originally,primarily
+원하다	願-	To want
+월급	月給	Monthly salary
+위반	違反	Violation, infringment
+위층	-層	The upper floor
+위치	位置	A position, a location
+위치하다	位置-	To be located
+위하다	爲-	To do for the sake of
+유교	儒敎	Confucianism
+유리	琉璃	A glass pane
+유리창	琉璃窓	A window which uses glass
+유명	有名	fame,celebrity status
+유치원	幼稚園	Kindergarten
+유학	儒學	Confucianism
+유학	留學	Studying abroad
+유학생	留學生	A foreign student
+유행	流行	Fashion, vogue
+유행하다	流行-	To be in fashion, to be popular
+음료	飮料	A beverage, a drink
+음료수	飮料水	Drinking water
+음악가	音樂家	A musician
+의견	意見	An opinion,a suggestion
+의미	意味	A meaning, a sense
+의미하다	意味-	To mean, signify
+의심하다	疑心-	To be suspicious, to doubt
+의하다	依-	To be due to, owing to
+이동	移動	movement,migration,drift
+이모	姨母	A maternal aunt
+이발소	理髮所	barber’s shop
+이사	移徙	House-moving
+이사하다	移徙-	To move house
+이상	以上	More than, above
+이상	理想	An ideal, a goal
+이상	異常	Indisposition, abnormal
+이상하다	異常-	To be strange,queer
+이성	理性	Reason, reasoning
+이외	以外	Except, apart from
+이용	利用	To use
+이용되다	利用-	To be used
+이용하다	利用-	To use, make use of
+이유	理由	Reason
+이익	利益	Profit
+이전	以前	Former days/times
+이하	以下	Less than, below
+이해	理解	Understanding
+이혼	離婚	Divorce
+이혼하다	離婚-	To get divorced
+이후	以後	After that
+인간	人間	A person, a human being
+인구	人口	Population
+인기	人氣	Popularity
+인분	人分	How many people counter for at restaurants
+인사말	人事-	Words of greeting
+인삼	人蔘	Ginseng
+인삼차	人蔘茶	Ginseng tea
+인상	人相	Look, personal appearance
+인상	印象	Impression, imprint
+인생	人生	Life
+인원	人員	The number of persons
+인천공항	仁川空港	Incheon international airport
+인형	人形	A doll
+일기	日氣	The weather
+일기	日記	A diary, journal
+일등	一等	First class, first class/grade
+일반	一般	universal,common,usual
+일반적	一般的	Universal, general
+일부	一部	A part, a portion
+일상	日常	Everyday, usual, ordinary
+일상생활	日常生活	Everyday (daily) life
+일정	日程	To be fixed, settled, regular
+일회용	一回用	For one time use
+일회용품	一回用品	A product to be used only once
+임금	賃金	Wages, pay
+임시	臨時	Temporary, special
+임신	妊娠	Pregnant
+입구	入口	Entrance
+입원	入院	Hospitalization
+입원하다	入院-	To enter a hospital
+입학	入學	Admission into school
+입학하다	入學-	To enter/be admitted into a school
+자가용	自家用	For personal/family use
+자격	資格	Qualification
+자기	自己	Oneself, number one, numerouno, self
+자동	自動	self-acting, self-moving, automatic
+자료	資料	materials,data
+자세히	仔細-	In detail
+자식	子息	one’s children
+자신	自信	Self-confidence
+자신	自身	one’s own self, one\\'s own body
+자연	自然	Nature
+자연스럽다	自然-	To be natural
+자유	自由	Freedom
+자유롭다	自由-	To be free
+자체	自體	one’s own body
+자판기	自販機	Vending machine
+작가	作家	writer,author
+잠시	暫時	For a little while
+장	章	A chapter in a book
+장갑	掌匣	A pair of gloves
+장군	將軍	A general
+장남	長男	The eldest son
+장래	將來	The future
+장점	長點	A merit,strong point
+장학금	奬學金	Scholarship
+재료	材料	stuff,material
+재산	財産	property,fortune, assets, possessions
+재작년	再昨年	The year before last
+저번	這番	Last time, the other day
+저자	著者	A writer,author
+저축	貯蓄	savings,saving
+적	敵	The enemy
+적극	積極	The positive
+적극적	積極的	Positively
+적당하다	適當-	To be appropriate
+적당히	適當-	suitable,proper
+적용하다	適用-	To apply (sth to sth else)
+전공	專攻	Specialty
+전국	全國	The whole country
+전기	電氣	Electricity
+전날	前-	The day before, the day prior
+전달하다	傳達-	To deliver
+전문	專門	A specialty
+전문가	專門家	A specialist
+전부	全部	All, everything
+전자	電子	An electron
+전쟁	戰爭	War
+전철	電鐵	An electric railway
+전체	全體	The whole, the entire section
+전체적	全體的	entirely,generally
+전통	傳統	tradition,convention
+전통적	傳統的	Traditional
+전하다	傳-	To transmit,convey
+전해지다	傳-	To be transmitted
+전혀	全-	entirely,utterly,completely
+전화기	電話機	Telephone receiver
+절대	絶對	Absoluteness
+절대로	絶對-	Absolutely
+절반	折半	Half
+절약하다	節約-	To economize
+점	點	a spot, a blemish
+점	店	Store
+점수	點數	marks,the number of marks
+점심때	點心-	Lunchtime
+점원	店員	A shop-assistant
+점점	漸漸	More and more, by degrees
+점차	漸次	gradually,in steps
+정	情	Feeling of attachment
+정거장	停車場	A railroad station
+정답	正答	The right answer
+정도	程度	grade,degree
+정리	整理	arrangment,regulation,adjustment
+정리하다	整理-	To adjust
+정말로	正-	Really
+정문	正門	The front gate,main entrance
+정보	情報	information,intelligence
+정상	頂上	The top, summit
+정식	正式	Formality, due form
+정신	精神	mind,spirit
+정신적	精神的	Mental
+정원	庭園	Garden
+정치	政治	Politics
+정치적	政治的	Political
+정하다	定-	To set,determine
+정해지다	定-	To be determined, settled
+정확하다	正確-	To be exact
+정확히	正確-	Exactly
+제공하다	提供-	offer,proffer
+제목	題目	A subject, theme
+제출하다	提出-	To submit,tender
+제품	製品	Manufactured goods
+제한	制限	limits,bounds
+조각	彫刻	Sculpture
+조건	條件	condition,stipulation
+조사	調査	investigation,inquiry
+조사하다	調査-	To examine,investigate
+조상	祖上	Ancestors
+조심스럽다	操心-	Cautious
+조심하다	操心-	To be careful
+존댓말	尊待-	Respectful speech
+졸업생	卒業生	A graduate
+종	種	A sort,kind,species
+종교	宗敎	religion,a faith
+종로	鍾路	Famous street in Seoul
+종류	種類	kind,sort,species
+종업원	從業員	waiter/waitress
+종일	終日	All day, throughout the whole day
+종합	綜合	Synthesis
+좌석	座席	A seat
+주로	主-	principally,mainly
+주문하다	注文-	To order, to request
+주변	周邊	A circumference
+주부	主婦	A wife
+주사	注射	A shot, an injection
+주요	主要	The major, the chief thing
+주위	周圍	The circumference,the girth
+주인공	主人公	The head of a family, the hero/heroine
+주장하다	主張-	To assert,maintain
+주제	主題	Subject, theme, topic
+주차	駐車	Parking
+주차장	駐車場	Parking lot
+주차하다	駐車-	To park
+주택	住宅	A house
+죽	粥	Rice porridge
+준비되다	準備-	To be ready
+준비물	準備物	Stuff that needs to be prepared
+중	中	The center, the middle
+중간	中間	In the middle
+중국집	中國-	Chinese restaurant
+중심	中心	The nucleus, the focus, the heart
+중요	重要	importance,consequence
+중요성	重要性	importance,gravity
+즉	卽	namely,that is to say
+즉시	卽時	At once,immediately
+증상	症狀	Symptoms
+증세	症勢	Symptoms, a patient’s condition
+지구	地區	A district,region
+지구	地球	The earth
+지난번	-番	Last time
+지방	地方	A locality, district
+지역	地域	An area, region
+지점	地點	A spot, point
+지하도	地下道	Underground road
+직업	職業	An occupation, calling
+직원	職員	Staff
+직장	職場	one’s work place
+직접	直接	Directly
+진짜	眞-	Real
+진출	進出	An advance
+진하다	津-	Be dark, deep
+진행되다	進行-	To have progressed, be advanced
+진행하다	進行-	Advance, proceed
+질	質	Quality, character
+질서	秩序	Order, system
+집중	集中	Concentration
+차남	次男	one’s second eldest son
+차례	次例	(1) order,precedence  (2) one time, one round
+차이	差異	difference,disparity
+참가하다	參加-	To take part in, join
+참석하다	參席-	To attend, take part in
+찻잔	茶盞	A teacup
+창고	倉庫	A warehouse,storehouse
+창밖	窓-	Outside the window
+채소	菜蔬	vegetables,greens
+책가방	冊-	Bookbag
+책방	冊房	Reading room
+책임	責任	Responsibility
+책임자	責任者	Person responsible
+철	계절	Season (the 4)
+청년	靑年	A young man, a youth
+청소기	淸掃機	A vacuum cleaner
+청소년	靑少年	Young boys and girls, teenagers
+체육	體育	Physical education
+체중	體重	Body weight
+초	初	Initial, in the beginning, first
+초	秒	A second
+초록색	草綠色	Green
+초밥	醋-	Japanese vinegared rice vegetables
+초보	初步	Initial, first steps
+초보자	初步者	A beginner, neophyte
+초청장	招請狀	An invitation (card)
+총장	總長	The president, the chancellor (university’s)
+촬영	撮影	Photographing, taking pictures/films
+최고	最高	The best
+최근	最近	Recently
+최대	最大	The greatest, the largest
+최선	最善	The best, one’s best
+최소한	最小限	Atleast
+최초	最初	In the very first, in the beginning
+추억	追憶	Memory
+축구공	蹴球-	A soccer ball
+축제	祝祭	a festival
+축하	祝賀	Congratulation, celebration
+출구	出口	An exit
+출근	出勤	Going to work
+출근하다	出勤-	To go to work
+출발	出發	To start (a journey,trip)
+출연하다	出演-	Appear on stage, act, sing
+출입	出入	Coming and going
+출입문	出入門	Door for exiting and entering
+출장	出張	A business trip
+충격	衝擊	An impact, a shock
+충분하다	充分-	To be sufficient, ample
+충분히	充分-	Enough, sufficiently
+취소	取消	Cancellation, anulment
+취소하다	取消-	To cancel, calloff
+취직	就職	Employment, getting a job
+취하다	取-	To adopt, assume, take
+취하다	醉-	To be drunk
+치과	齒科	A dentist
+치료	治療	Medical treatment, medical care
+치료하다	治療-	To cure, heal, treat a patient
+친절	親切	Kindness, goodness
+친척	親戚	Relatives
+친하다	親-	To be intimate, familiar, close, friendly
+침실	寢室	Bedroom
+칭찬	稱讚	Praide, admiration
+탑	塔	A tower
+태도	態度	attitude,comportment
+태양	太陽	The sun
+태풍	颱風	Typhoon
+토론	討論	A debate, discussion
+통	桶	A tub, a cask
+통	通	Counters for letters
+통신	通信	communications,correspondance
+통일	統一	Unification
+통장	通帳	A bankbook (check register)
+통하다	通-	Run, lead; flow; go through
+퇴근	退勤	Leaving one’s office, coming home from work
+퇴근하다	退勤-	To go home from work
+특별	特別	Be special, extraordinary
+특별하다	特別-	To be special, extraordinary
+특별히	特別-	Especially
+특징	特徵	A special feature, a distinguishing feature
+특히	特-	Especially
+파도	波濤	Waves, billows
+판단	判斷	A judgment, a conclusion
+판매	販賣	Sale, selling
+판매하다	販賣-	To sell
+편	篇	Compilation, editing
+편리하다	便利-	To be convenient, handy
+편안하다	便安-	To be peaceful
+편하다	便-	Untroubled from cares
+편히	便-	Easily, comfortably
+평범하다	平凡-	Plain, average
+평생	平生	A lifetime
+평소	平素	Ordinary times, ordinarily
+평일	平日	A weekday
+평화	平和	Peace
+포기하다	抛棄-	To give up, to abandon
+포도주	葡萄酒	Grape wine
+포장	包裝	packing,wrapping
+포함되다	包含-	To be included in
+포함하다	包含-	To include,contain
+폭	幅	Width; range
+표시하다	表示-	To make a sign, display
+표정	表情	Facial expression, look
+표현	表現	Verbal expression, representation, manifestation
+표현하다	表現-	To express, make known by saying
+풍경	風景	Landscape, scenery
+피로	疲勞	Fatigue, exhaustion
+피로하다	疲勞-	To be fatigued, weary
+피부	皮膚	Skin
+필통	筆筒	Pencil case
+하숙집	下宿-	Dormitory, boarding house
+하얀색	-色	White
+하여튼	何如-	Anyways
+학기	學期	An educational term
+학생증	學生證	Student identification
+학습	學習	Learning, education
+학원	學院	Learning institute
+한국적	韓國的	Korean (adjective)
+한잔	-盞	A drink of liquor
+한잔하다	­盞-	To drink a glass of liquor
+한편	-便	One side, one way
+할인	割引	A discount
+합격	合格	Success in an examination
+합치다	合-	combine,unite
+해결	解決	Solution, settlement
+해결하다	解決-	To fix a problem, solve a question
+해석	解釋	Interpretation, a comment
+해외	海外	Abroad, foreign countries
+해외여행	海外旅行	Foreign travel
+행동	行動	Action, behavior
+행동하다	行動-	To act, behave
+행복	幸福	Happiness
+행복하다	幸福-	To be happy
+행사	行事	An event, a function
+향기	香氣	fragrance,aroma,perfume
+향수	香水	A perfume
+향하다	向-	To face, look out on
+허용하다	許容-	To permit, approve, grant, allow
+현관	玄關	The porch, the entrance
+현금	現金	Cash, ready funds, not a credit card
+현대	現代	The present age, times
+현재	現在	The present time, now, at present
+현지	現地	The actual place, the very spot
+형님	兄-	The respectful, proper way a man refers to an older friend
+형부	兄夫	A husband of a girl’s older sister
+형제	兄弟	Brothers and sisters
+호랑이	虎狼-	A tiger
+호선	號線	The track number for a train
+호수	湖水	A lake
+혹은	或-	If that’s not the case
+홍차	紅茶	Tea, black tea
+화가	畵家	A painter, a drawer artist
+화나다	火-	Get angry
+화려하다	華麗-	Splendor, magnificence of a display, a look
+화분	花盆	Flower pot
+화장품	化粧品	Makup, cosmetics
+확대되다	擴大-	To be magnified
+확대하다	擴大-	To enlarge,magnify
+확실하다	確實-	To be sure, certain
+확실히	確實-	certainly,for sure
+확인	確認	A check,confirmation
+확인하다	確認-	To confirm,corroborate
+환갑	還甲	one’s 60th anniversary
+환경	環境	Environment
+환영	歡迎	Welcome
+활동	活動	Activity
+활동하다	活動-	To be active, lead an active life
+활발하다	活潑-	Be lively, sprightly
+활용하다	活用-	Utilize, make practical use of
+회복하다	回復-	To recover, get better, get well again
+회색	灰色	Gray
+회원	會員	A member of a society
+회장	會長	Chariman, the president
+회화	繪畵	Conversations, talk
+횡단보도	橫斷步道	Crossing
+효과	效果	Effect, effectiveness
+후배	後輩	one’s junior
+후회하다	後悔-	To regret
+휴가	休暇	holidays,vacation
+흥미	興味	interest,zeal
+희망	希望	Hope, wish
