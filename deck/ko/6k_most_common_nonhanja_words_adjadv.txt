@@ -1,0 +1,460 @@
+괜찮다	To be okay
+고프다	голодный
+배고프다	голодный
+같다	похожий; равный; подобны
+비슷하다	похожий
+가깝다	близкий
+멀다	дальний 갈 길이 ~
+가볍다	легкий (вес)
+무겁다	тяжёлый; весомый; важный; серьёзный
+힘들다	трудный
+밝다	светлый; ясный; яркий; острый; жизнерадостный; счастливый;
+배부르다	ссытый
+고맙다	благодарный
+반갑다	приятный; радостный; радушный
+많다	многочисленный
+적다	немногочисленный; небольшой; маленький경험이 ~
+맑다	ясный; чистый; прозрачный; правильный
+맛있다	вкусный
+맛없다	невкусный
+덥다	горячий (воздух/погода)
+뜨겁다	горячий (на ощупь)
+따뜻하다	умеренный; теплый
+시원하다	прохладный; освежающий; почувствовать облегчение
+춥다	холодный (воздух/погода)
+차갑다	холодный; ледяной; хладнокровный (touch)
+차다	холодный; прохладный; промозглый 날씨가 ~
+높다	высокий
+낮다	низкий
+늦다	опоздавший
+밤늦다	It is late at night
+넓다	широкий
+좁다	узкий
+길다	длинный
+짧다	короткий
+깨끗하다	чистый; чистый и свежий; аккуратный
+재미없다	скучный
+재미있다	интересный, забавный
+작다	маленький
+크다	большой
+귀엽다	милый
+예쁘다	милый; симпатичный
+아름답다	прекрасный
+곱다	красивый гладкий 아름답다
+어떠하다	To be how
+어떻다	how,what.. do you think of
+이렇다	Like this
+그렇다	That is right or  yes.
+저렇다	Such a thing as that
+어렵다	трудный; затруднительный; сложный
+쉽다	лёгкий; простой; возможно;
+손쉽다	Be easy, simple
+아프다	больной
+아니다	To not be
+싶다	хотеть; желать; видимо
+좋다	To be good
+싫다	To not like, to hate
+나쁘다	плохой
+싸다	дешевый 집값이 ~
+비싸다	дорогой
+값싸다	Cheap or  low-priced
+슬프다	печальный; грустный; горестный
+빠르다	быстрый
+느리다	медленный; медлительный; пологий
+이러하다	Be this way, be like follows
+그러하다	такой, в таком случае
+즐겁다	довольный; радостный; приятный
+조용하다	тихий; едва слышный; заглушённый
+시끄럽다	шумный; сутолочный; надоедливый
+바쁘다	очень занятой; очень спешный
+없다	не быть; не иметься
+다르다	другой; иной; отличный
+이르다	Be early, premature 빠르다
+굵다	толстый; крупный; большой
+대단하다	большой; громадный; огромный
+커다랗다	To be very big/large
+괴롭다	мучительный
+고르다	равный; единообразный; одинаковый 차이가 없다
+걱정스럽다	беспокойный
+가난하다	бедный
+가늘다	тонкий; стройный; узкий
+가득하다	наполненный до краев; полный
+불쌍하다	жалкий, несчастный
+부끄럽다	испытывать чувство стыда
+부드럽다	мягкий (на ощупь); мелкий (о песке, муке и т.п.); нежный
+부럽다	испытывать зависть
+바르다	прямой; неизогнутый; правильный; правдивый; честный;  굽은 데가 없다
+올바르다	честный; прямой
+옳다	правильный; правый; верный
+밉다	противный; отвратительный; омерзительный; ненавистный
+무섭다	страшный; лютый
+멋있다	привлекательный; модный
+더럽다	грязный; нечистый
+답답하다	душный; скучный; тоскливый
+놀랍다	wonderful; marvelous; To be surprising
+낡다	старый; устарелый; ветхий
+새롭다	новый
+젊다	молодой
+깊다	глубокий; глухой; крепкий; густой
+기쁘다	рад; радостный
+그립다	любимый; дорогой; милый
+그만하다	Be about the same or  be neither better nor worse
+궁금하다	волноваться; тревожиться; беспокоиться; чувствовать голод  be curious about
+자랑스럽다	To be proud
+잘생기다	To be handsome
+못생기다	некрасивый; уродливы
+부르다	сытый, опухший, вздутый 배가 ~
+어둡다	тёмный; мрачный; плохой; несведущий в чём; плохо осведомлённый о чем
+어리다	To be very young, juvenile 나이가 적다
+얇다	тонкий; плоский; узкий
+얕다	мелкий; неглубокий; поверхностный
+엷다	тонкий; светлый; бледный
+짙다	очень густой; глубокий
+안되다	To refuse to accept 마음이 언짢다
+안타깝다	(о человеке) разочарованный; вызывающий сожаление; (о предмете) огорчительный; печальный
+알맞다	соответствующий; подходящий
+씩씩하다	бодрый; энергичный
+아무렇지 않다	To be indifferent, casually
+세다	сильный жёсткий; грубый; 기운이 ~
+서투르다	неопытный; неловкий; неуклюжий;
+사랑스럽다	Lovely
+사이좋다	Be on good terms with
+훌륭하다	великий; выдающийся; знатный; знаменитый
+외롭다	одинокий
+튼튼하다	Solid, compact, firm
+굳다	крепкий; твёрдый; прочный
+착하다	добрый; добродушный; добросердечный;
+조그맣다	маленький; махонький; мелкий; 조그마하다
+틀림없다	безошибочный
+부지런하다	усердный; прилежный; упорный
+게으르다	ленивый; нерадивый
+익숙하다	опытный; умелый; искусный; привычный;
+익다	 быть готовым; стать привычным; быть знакомым 손에 ~
+낯설다	незнакомый, неизвестный
+낫다	лучший 더 좋다
+엉뚱하다	Be extraordinary, extravagant ; to misdirect somebody`s attention
+흐리다	неясный; нечёткий; смутный; мутный; грязный; пасмурный; 날이 ~
+꼼꼼하다	тщательный; внимательный; щепетильный
+귀찮다	докучливый; надоедливый
+그럴듯하다	правдоподобный; как будто хороший
+거칠다	непокладистый; грубый; шероховатый; шершавый
+갑작스럽다	внезапный; неожиданный
+힘겹다	непосильный; очень тяжёлый 힘부치다
+힘차다	Be forcible,powerful
+미끄럽다	скользкий; гладкий
+못되다	To go wrong
+못지않다	Be just as good as
+못하다	Be inferior, worse than
+무덥다	душный; жарко
+멋지다	привлекательный (модный)
+마땅하다	подходящий; соответствующий; должный;
+단단하다	твердый; крепкий; прочный;
+눈부시다	ослепительный; яркий; блестящий
+넉넉하다	достаточный; обильный;
+날카롭다	острый; острый; чувствительный;
+꾸준하다	упорный; неустанный
+끊임없다	uninterrupted; endless
+끝없다	Endless or  unfathomable
+깔끔하다	чистый и гладкий; опрятный; аккуратный; подтянутый; умелый; сообразительный, наблюдательный
+재밌다	interesting,fun 재미있다
+잘나다	выдающийся; прекрасный; красивый
+동그랗다	круглый
+따스하다	warm; mild; genial
+썰렁하다	остывший; холодный
+어리석다	глупый; тупой; бестолковый
+어지럽다	идти кругом; беспорядочный; хаотический
+얄밉다	омерзительный; отвратительный; противный;
+쓸데없다	ненужный; бесполезный; лишний
+쓸쓸하다	хмурый; угрюмый; грустный
+아깝다	жалеть; жаль; жалко
+아쉽다	недоставать кого-либо, чего-либо; обидный
+심심하다	скучный; пресный; недосоленный 지루하다
+싱싱하다	свежий; буйно растущий; живой;
+서툴다	неопытный; неловкий; неуклюжий
+섹시하다	To be sexy sexy-
+섭섭하다	Be sorry,disappointed
+서늘하다	Be cool,refreshing
+뻔하다	almost,nearly
+흔하다	изобиловать чем; обычный; заурядный; рядовой;
+우습다	смешной; забавный; комичный;
+참되다	To be true, honest, faithful
+짜증스럽다	досадный; нервный;
+지루하다	томительный; нудный; надоедливый; скучный
+지저분하다	грязный; неряшливый
+지겹다	скучный; утомительный;
+조그마하다	маленький; махонький; мелкий;
+점잖다	солидный; важный; благородный
+다름없다	Be similar, not different
+포근하다	мягкий; нежный; тёплый
+웬만하다	сносный; удовлетворительный
+엄청나다	огромный; непомерный; страшный; невообразимый
+잦다	Be frequent, incessant 왕래가 ~
+만만하다	мягкий; слабый; простой; 대적할 만함
+고요하다	тихий; безмолвный; спокойный
+곧다	прямой
+바람직하다	Be desirable, advisable, to be appropriate, good
+환하다	To be clear, unobstructed ; to be light, bright (opp. 어둡다)
+번거롭다	довольно сложны(запутанный); шумный 할 일이 많아서 아주 바쁘다
+실리다	быть нагруженным; быть помещённым 싣다'의 피동사
+싱겁다	пресный; несоленный; недосоленный; слабый; некрепкий;
+쓰다	горький; крепкий 나물이 ~
+달다	сладкий; вкусный; 맛
+짜다	солёный 음식이 ~
+맵다	острый;
+고소하다	вкусный; пахнущий запахом поджаренного кунжута 맛이 ~
+까맣다	Black
+캄캄하다	To be pitch-black
+검다	Black or  dark 색깔이 ~
+노랗다	Be yellow
+하얗다	White
+희다	White, fair
+붉다	красный
+빨갛다	deep-red,crimson
+푸르다	To be blue, to be green
+파랗다	To be blue
+갑자기	Suddenly
+벌떡	Suddenly, abruptly
+문득	Suddenly
+같이	Together
+가끔	Sometimes
+하지만	But, nevertheless
+함께	Together, with
+더	More
+덜	Less, incompletely
+다시	Again
+다	All, everything
+너무	Too much
+아주	Extremely
+매우	Very
+그렇지만	But or  however
+그래서	And so accordingly
+그러니까	And so it is that
+그러면	If so or  if that is the case
+그럼	Certainly or  of course. 그러면'의 준말
+그러나	However or  but still
+그런데	But or  however
+그런대로	Such as it is or  anyways
+근데	But or  however 그런데
+그리고	And or  and then
+그래	да; так 그리하여
+그러므로	So or  hence or  therefore
+그렇게	And so. like that 그러하게
+이렇게	In this way 이러하게
+저렇게	Like that 저러하게
+곧	Soon
+어서	Quickly 2) kindly
+어제	Yesterday
+언제	when,at what time
+언제나	everytime,always
+언젠가	One of these days, at some time in the future
+얼마나	How many, how much
+자주	Always, constantly
+늘	Always
+아직	Still
+벌써	Already
+이미	Already
+아니	Not
+아마	Probably
+서로	mutually,one another
+빨리	Quickly
+바로	Right, correctly
+못	Cannot
+많이	A lot
+조금	A little
+좀	A little 조금
+안	~ not ~ + VERB 아니
+꼭	точно; как раз; непременно крепко; сильно 반드시
+참	really,truly 참으로
+왜	Why?
+왜냐하면	Because
+일찍	Early
+일찍이	Early
+천천히	Slowly
+잘	Well
+잠깐	For a little while
+오래	Long, for a long time
+내내	All along, the entire time
+가장	Most
+먼저	First
+보다	More than, greater than .... 한층 더
+마구	беспорядочно; без разбора
+막	Carelessly, at random 마구
+막	Just now 바로 지금
+거의	Almost or  nearly
+가까이	Close
+가득	Full ~ 차다
+가만히	Quietly or  softly
+한꺼번에	одновременно; сразу; за один раз
+푹	Completely, entirely; неосторожно
+함부로	беспорядочно; как попало
+도로	Back, same as ever, same as it was before
+깨끗이	Clean or  neatly
+꾸준히	Untiringly, ceaselessly
+살짝	(1) softly,lightly,just a little (2) furtively, stealthily
+잔뜩	extremely,to the utmost
+어쩌면	может быть; вероятно; возможно 아마도 2) как; какой
+어쩐지	(1) почему-то; отчего-то; неудивительно, что (2) in combination with an ending giving a reason to place stress on the action of the verb
+겨우	Barely or  narrowly.  간신히
+흔히	Generally, commonly ; often
+마음대로	As you wish
+마주	Face to face
+마치	As though, as if
+마침	Just, exactly
+마침내	Finally, in the end
+대단히	Extremely
+꽤	Fairly or  considerably
+끝내	The end
+깊이	Deepness
+깜빡	With a flash or  twinkle
+그만	That much or  a little amount 그 정도까지만
+그만큼	That much or  to that extent
+그냥	Just because or  in that condition
+그다지	So much or  to that extent
+굳이	Firmly or  admanantly
+곧바로	At once or  straight away
+게다가	In addition
+없이	Without
+엊그제	The day before yesterday, a few days ago
+어느새	незаметно; как-то; уже
+얼른	Fast, quickly, rapidly
+아까	A little while ago
+아마도	Probably
+아무래도	Never on any account, no matter what
+아무리	However much
+아무튼	In any case
+스스로	On its own, of its own free will
+새로	newly,anew
+반드시	непременно; обязательно; безусловно
+미리	Beforehand
+및	As well as
+몰래	secretly,quietly
+몹시	Extremely
+멀리	Far away
+훨씬	By far, very much so
+이따가	A little later
+유난히	uncommon,exceptional
+왠지	I don’t know why, there is no reason for it
+이리	This way, this direction ~ 오너라
+저리	That place 저곳으로
+그리	So or  to that extent 그러한 모양
+해마다	Every year, each year
+조금씩	A little at a time, little by little
+조용히	Quietly
+제대로	As properly is suitable
+제발	kindly,please
+제법	quite,fairly,considerably
+적어도	At the least
+무척	Extremely
+너무나	Extremely
+자꾸	всё время; непрерывно; то и дело
+자꾸만	Repeatedly (emphasized)
+오직	Only, merely, solely
+온통	Wholly, entirely
+오래도록	For long, a long while
+높이	High, aloft (adverb)
+잘못	wrong,mistake
+깜짝	With a surprise 놀라는 모양
+갈수록	As one goes aong
+달리	Differently
+가득히	Full
+가만	Quietly or  softly
+한데	The open air, outside, the exterior
+하긴	Indeed, though, nevertheless
+하도	Too much, excessively
+확	With a burst, great puff
+퍽	Very, very much ~ 궁금하다
+거꾸로	вверх ногами; вверх дном; шиворот-навыворот; наоборот
+워낙	с самого начала; по природе; очень; ужасно; слишком
+새로이	newly,afresh
+막상	Really, actually
+대충	Almost, nearly, about
+더욱	More and more
+더욱더	More and more and more
+더욱이	Besides, moreover
+도리어	On the contrary
+다만	Only, merely
+널리	Widely
+꼭	Tightly or  fast 힘을 주는 모양
+꼼짝	Cannot move
+꽉	Tightly or  fast
+끊임없이	Constantly or  unceasingly
+끝없이	Boundlessly
+나란히	In a line, row
+그저	1) still or  all the time  2) easily or  with no effort
+그제야	For the first time or  not ... until,  only when; only after; 
+그토록	So much or  to such an extent
+금세	In a moment or  at once
+고작	To be at the highest or  the best
+곧잘	1) fairly or  pretty well 2) frequently or  too often
+어쨌든	In any case, anyhow
+어쩜	Well, I guess that, is extremely.....
+앞서	Before, previously 2) in anticipation,beforehand
+어느덧	незаметно; невольно; неожидан
+쓸데없이	To have no use
+실컷	To one’s satisfaction
+썩	Very much,greatly
+슬그머니	Furtively
+손수	With one’s own hands, personally
+비로소	только что; впервые
+힘껏	With all one’s might
+힘없이	feebly,weekly
+바싹	Completely
+미처	To that extent
+모조리	One and all, wholly
+모처럼	At long last
+말없이	At a loss for words
+마음껏	As much as you want
+이따금	From time to time
+활짝	extensively,widely
+이같이	Like this, like so
+이내	soon,right away
+이대로	As it is
+채	Still, not yet 말이 ~ 끝나기도 전에
+이리저리	This way and that, here and there ~ 돌아다니다
+이어	vulgarity,slang
+이어서	Subsequently
+이윽고	After a while, shortly
+이제야	These days
+일부러	On purpose, intentionally
+튼튼히	Strongly, firmly
+탁	With a bang, with a snap
+차라리	rather,preferably
+차츰	gradually,step by step
+참으로	really,indeed
+쭉	All the time
+죽	In a very straight line, in a row 줄을 ~ 긋다
+저마다	Each one, everyone
+저절로	Of itself, on its own accord
+재빨리	quickly,rapidly
+영	Really, totally ~ 딴판이다
+오히려	Rather,preferably
+그제서야	Then
+곧이어	Soon hereafter
+오로지	Only, solely, exclusively
+깊숙이	Deep or  far
+하나하나	Each individual piece
+틀림없이	No mistaking it
+부지런히	Diligently
+차마	For all the world
+슬쩍	Secretly, on the sly, stealthily
+맘대로	As you want 마음대로
+얼핏	at a momentary glance or intermittently appearing (e.g. catch a fleeting glimpse of) 얼핏 보다
+거듭	Again or  over and over
+그리로	Over there
+그리하여	And then or  and so or  and now
+줄곧	All the time, all through, repeatedly, constantly
+한결	Stands out conspicuously, especially
+아예	From the very first, from the very beginning
+으레	customarily,habitually
+한창	The height, summit , the top
+아울러	And, both together
+어찌	How, in what way, by what means 어찌 할 수 없는
+어찌나	extremely,quite,awfully
+곧장	Directly or  straightforwardly ; to do something straight away
+그나마	Even though or  nevertheless
+홀로	Alone, by oneself
+어쩌다가	By chance, accident ; sometimes
+골고루	Evenly or  among all indiscriminately
+야옹	Mewing, meowing
+하하	Ha ha ha ha ha
+허허	Ha-ha, with a laugh
