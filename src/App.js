@@ -11,7 +11,7 @@ function Error() {
    return (
             <div className='text-center'>
                <h1>404</h1>
-               <h2>Нет такой страницы</h2>
+               <h2>Нет такой страницы (Page not found)</h2>
             </div>
           );
 }

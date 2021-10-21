@@ -186,7 +186,6 @@ function TestWordMode({rows, modeControls, language, isKanaMode}) {
 function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode,
                initialMode, onResetMode}) {
    const [mode, setMode] = useState(initialMode ?? Mode.TestTranslation);
-   //console.log(initialMode ?? Mode.TestTranslation);
    if(initialMode !== undefined && initialMode !== mode) {
       setMode(initialMode);
    }
@@ -226,6 +225,9 @@ function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode,
    return (<tbody style={{ }} className={isActive ? "border border-primary" : ""}>{modeTable}</tbody>);
 }
 
+const get2CharCode = (languageCode) => {
+   return languageCode.substr(0, 2)
+}
 
 
 const KanaMode = ({onChange}) => (
@@ -268,7 +270,7 @@ function getCountryFlag(cc) {
 
 const LanguageSelector = ({language}) => {
   return (<span>
-            Язык: {getCountryFlag(language)}
+            Язык: {getCountryFlag(get2CharCode(language))}
           </span>)
 }
 
@@ -276,9 +278,9 @@ const RadioButton = ({currentMode, myMode, text, onModeChange}) => {
   const active = currentMode === myMode
   return (
   <>
-    <label class={`btn btn-secondary ${active ? 'active' : ''}`}>
-      <input type="radio" name="options" id="option1" autocomplete="off"
-              checkedAttr={currentMode === myMode}
+    <label className={`btn btn-secondary ${active ? 'active' : ''}`}>
+      <input type="radio" name="options" id="option1" autoComplete="off"
+              checked={currentMode === myMode}
               onChange={()=> onModeChange(myMode)}
       /> {text}
     </label>
@@ -290,7 +292,7 @@ const SetAllCardMode = ({mode, onModeChange}) => {
   const args = {currentMode: mode, onModeChange: onModeChange}
    return (
       
-      <div class="btn-group btn-group-toggle m-2" data-toggle="buttons">
+      <div className="btn-group btn-group-toggle m-2" data-toggle="buttons">
         <label className="mr-2">Общий режим:</label>
         <RadioButton myMode={Mode.ShowWordAndTranslation}
                      text='Слово и перевод'
@@ -314,7 +316,7 @@ const Page = (props) =>
 
 const GlobalControls = ({deck, setInitialMode, initialMode, 
                          setKanaMode, setOnlyForgottenWords, }) => {
-  const supportsExtraMode = [ 'ja', 'cn', 'ko' ].includes(deck.language) // kana or pinyin
+  const supportsExtraMode = [ 'ja', 'cn', 'ko', 'zh' ].includes(get2CharCode(deck.language)) // kana or pinyin
   return (
   <>
      <LanguageSelector language={deck.language} />
@@ -347,15 +349,16 @@ function Matrix(props) {
 
    const deckId = urlParams.id;
    const deckGetter = async () => {
-      const deckD = await getUser().getDeck(deckId, 0, 100)
-      setDeck(deckD);
+      const deckData = await getUser().getDeck(deckId, 0, 100)
+      setDeck(deckData);
    }
    
    if (deck === undefined)
       return (<><h1 className='text-center'>Не такой колоды</h1></>)
+   
+   document.documentElement.lang = deck.language
 
    const chunk_size = 5
-   console.log(deck)
    const cardRows = !isOnlyForgottenWords 
                         ? deck.rows 
                         : deck.rows.filter((item) => item.score < 0);
