@@ -62,6 +62,13 @@
       "Language": "ko",
       "FileName": "ko/6k_most_common_nonhanja_words_adjadv.txt"
    },
+   {
+      "Id" : 2009,
+      "Name" : "Пестрая лента (предложения)",
+      "Description": "Двуязычные предложения из 'Пестрая лента' 얼럭무늬 끈 из 셜록홈즈 단편소설",
+      "Language": "ko",
+      "FileName": "ko/SpeckledBand-sentences.txt"
+   },
    
    {
       "Id" : 2100,

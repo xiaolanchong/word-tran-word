@@ -1,33 +1,31 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import { MatrixList } from './MatrixList.js'
 import { Matrix } from './Matrix.js'
 import { NavBar } from './NavBar.js'
 import { TestPage } from './TestPage.js'
+import AboutPage from './AboutPage';
 
-function Error() {
-   return (
+const Error = () => (
             <div className='text-center'>
                <h1>404</h1>
                <h2>Нет такой страницы (Page not found)</h2>
             </div>
-          );
+          )
+
+const MainPage = () => {
+  const urlParams = new URLSearchParams(window.location.search)
+  if(!urlParams.has('mode'))
+    return (<MatrixList />)
+  
+  switch(urlParams.get('mode')) {
+    case 'deck': return <Matrix />
+    case 'test': return <TestPage />
+    case 'about': return <AboutPage/>
+    default: return <Error />
+  }
 }
 
-function App() {
-  return (
-      <BrowserRouter>
-         <NavBar />
-            <Switch>
-             <Route path={`${process.env.PUBLIC_URL}/`} component={MatrixList} exact/>
-             <Route path={`${process.env.PUBLIC_URL}/deck`} component={Matrix}/>
-             <Route path={`${process.env.PUBLIC_URL}/test`} component={TestPage}/>
-             <Route component={Error}/>
-           </Switch>
-      </BrowserRouter>
-  );
-}
+const App = () => <><NavBar/><MainPage /></>
 
 export default App;

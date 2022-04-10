@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import { getUser } from './User.js';
 
 class MatrixList extends React.Component {
@@ -16,7 +15,7 @@ class MatrixList extends React.Component {
    render() {
       const rows = this.state.decks.map( (deck, index) =>
          <tr key={index}>
-            <td><Link to={`${process.env.PUBLIC_URL}/deck?id=${deck.id}`}>{deck.name}</Link></td>
+            <td><a href={`${process.env.PUBLIC_URL}?mode=deck&id=${deck.id}`}>{deck.name}</a></td>
             <td>{deck.description ?? ''}</td>
             <td>{deck.language}</td>
             <td className="text-right">{deck.rowNumber ?? '?'}</td>
@@ -24,19 +23,20 @@ class MatrixList extends React.Component {
       );
       return (
          <div className='container'>
-               <table className="table table-nonfluid ml-1">
-                  <thead className="thead-dark">
-                     <tr>
-                        <th>Название</th>
-                        <th>Описание</th>
-                        <th>Язык</th>
-                        <th>Кол-во записей</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     {rows}
-                  </tbody>
-               </table>
+            <h1>Все списки для повторения</h1>
+            <table className="table table-nonfluid ml-1">
+               <thead className="thead-dark">
+                  <tr>
+                     <th>Название</th>
+                     <th>Описание</th>
+                     <th>Язык</th>
+                     <th>Кол-во записей</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  {rows}
+               </tbody>
+            </table>
         </div>
       );
    }

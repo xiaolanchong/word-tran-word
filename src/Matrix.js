@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { getUser, getTest } from './User.js';
-import queryString from 'query-string';
 import Editable from "./Editable";
 import VirtualKeyboardInput from "./VirtualKeyboardInput";
 
@@ -329,7 +328,7 @@ const GlobalControls = ({deck, setInitialMode, initialMode,
   )
 }
 
-function Matrix(props) {
+function Matrix() {
    const [deck, setDeck] = useState({rows:[], name: '', language: ''});
    const [activeCardId, setActiveCardId] = useState(undefined);
    const [isKanaMode, setKanaMode] = useState(false);
@@ -342,12 +341,12 @@ function Matrix(props) {
       }
    });
    
-   const urlParams = queryString.parse(props.location.search);
-   if (urlParams.id === undefined) {
-      return null;
+   const urlParams = new URLSearchParams(window.location.search)
+   if(!urlParams.has('id')) {
+     return null;
    }
 
-   const deckId = urlParams.id;
+   const deckId = urlParams.get('id')
    const deckGetter = async () => {
       const deckData = await getUser().getDeck(deckId, 0, 100)
       setDeck(deckData);

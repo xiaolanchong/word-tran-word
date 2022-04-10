@@ -1,6 +1,10 @@
 
 ### Basic commands
 
+- Install: `npm install`, under Windows the following config change might be required:
+    - npm config set python python2.7
+    - npm config set msvs_version 2015
+
 - Run the app: `npm run start`
 - Set API repo access with a personal token: https://create-react-app.dev/docs/deployment/#troubleshooting
 - Deploy to Git: `npm run deploy`
