@@ -1,22 +1,13 @@
 {
   "files": {
-    "main.css": "/word-tran-word/static/css/main.a235bd53.chunk.css",
-    "main.js": "/word-tran-word/static/js/main.79b55f70.chunk.js",
-    "main.js.map": "/word-tran-word/static/js/main.79b55f70.chunk.js.map",
-    "runtime-main.js": "/word-tran-word/static/js/runtime-main.d53a816d.js",
-    "runtime-main.js.map": "/word-tran-word/static/js/runtime-main.d53a816d.js.map",
-    "static/js/2.1ad92232.chunk.js": "/word-tran-word/static/js/2.1ad92232.chunk.js",
-    "static/js/2.1ad92232.chunk.js.map": "/word-tran-word/static/js/2.1ad92232.chunk.js.map",
+    "main.css": "/word-tran-word/static/css/main.28f8bd54.css",
+    "main.js": "/word-tran-word/static/js/main.7cf4a07a.js",
     "index.html": "/word-tran-word/index.html",
-    "precache-manifest.7b17561ae101b3f52bbec3d7667a6874.js": "/word-tran-word/precache-manifest.7b17561ae101b3f52bbec3d7667a6874.js",
-    "service-worker.js": "/word-tran-word/service-worker.js",
-    "static/css/main.a235bd53.chunk.css.map": "/word-tran-word/static/css/main.a235bd53.chunk.css.map",
-    "static/js/2.1ad92232.chunk.js.LICENSE.txt": "/word-tran-word/static/js/2.1ad92232.chunk.js.LICENSE.txt"
+    "main.28f8bd54.css.map": "/word-tran-word/static/css/main.28f8bd54.css.map",
+    "main.7cf4a07a.js.map": "/word-tran-word/static/js/main.7cf4a07a.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.d53a816d.js",
-    "static/js/2.1ad92232.chunk.js",
-    "static/css/main.a235bd53.chunk.css",
-    "static/js/main.79b55f70.chunk.js"
+    "static/css/main.28f8bd54.css",
+    "static/js/main.7cf4a07a.js"
   ]
 }
