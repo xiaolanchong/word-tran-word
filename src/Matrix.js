@@ -42,21 +42,21 @@ function ConfirmTranslationControls({wordId}) {
    switch(step) {
       case Step.ShowOkFailed:
          return <React.Fragment>
-                  <span className="float-right">
-                     <button className=' ml-2 btn btn-success btn-sm py-0' id={'remember-button-' + wordId}
+                  <span className="float-end">
+                     <button className=' ms-2 btn btn-success btn-sm py-0' id={'remember-button-' + wordId}
                              onClick={()=> { setStep(Step.Ok); getTest().setTranslationTestResult(wordId, true); }} >
                         Помню
                      </button>
-                     <button className=' ml-2 btn btn-danger btn-sm mx-1 py-0' id={'forgot-button-' + wordId}
+                     <button className=' ms-2 btn btn-danger btn-sm mx-1 py-0' id={'forgot-button-' + wordId}
                              onClick={()=> { setStep(Step.Failed); getTest().setTranslationTestResult(wordId, false); }} >
                         Не помню
                      </button>
                   </span>
                 </React.Fragment>
       case Step.Ok:
-         return <span className="text-success float-right ml-2">{'\u00A0'.repeat(7)  + '\u2713' + '\u00A0'.repeat(27)}</span>
+         return <span className="text-success float-end ms-2">{'\u00A0'.repeat(7)  + '\u2713' + '\u00A0'.repeat(27)}</span>
       case Step.Failed:
-         return <span className="text-danger float-right ml-2">{ '\u00A0'.repeat(25) + '\u2717' + '\u00A0'.repeat(9)}</span>
+         return <span className="text-danger float-end ms-2">{ '\u00A0'.repeat(25) + '\u2717' + '\u00A0'.repeat(9)}</span>
       default:
          return null;
    }
@@ -150,8 +150,8 @@ function RowToInputWord({modeControls, rowSpan, word, translation, language}) {
       const correct = (text.length !== 0) && (word === text);
       setCorrect(correct);
    };
-   const after = <div className='text-success float-right'>{isCorrect ? '\u2713' : ''}</div>;
-   const editable = <div className="float-left">
+   const after = <div className='text-success float-end'>{isCorrect ? '\u2713' : ''}</div>;
+   const editable = <div className="float-start">
                         <InputEditable 
                            ethalon={word} 
                            onChange={onChangeText}
@@ -191,12 +191,12 @@ function Card({rows, language, name, isFirst, isActive, onActivate, isKanaMode,
 
    const ModeButton = ({buttonMode, name, title, id}) => {
              const style = isActive ? 'primary' : 'secondary';
-             return <label className={`btn btn-sm btn-outline-${style} text-left ` + ((mode === buttonMode)? 'active' : '')}
+             return <label className={`btn btn-sm btn-outline-${style} text-start ` + ((mode === buttonMode)? 'active' : '')}
                         title={title}>
                         <input type="radio" name={"option"+id} id={"option"+id}
                         autoComplete="off" checked={mode === buttonMode}
                         onChange={() => { onActivate(); setMode(buttonMode) }} />
-                        {name}
+                        <span className="ms-1">{name}</span>
                    </label>
    };
    const modeControls = (
@@ -379,14 +379,14 @@ function Matrix() {
    }
 
    const tableStyle = "table table-striped table-sm  table-nonfluid border";
-   return ( <div className="m-2">
-               <h2 className="ml-3">{deck.name}</h2>
+   return ( <div className="m-2" data-bs-theme="dark">
+               <h2 className="ms-3">{deck.name}</h2>
                
                <div className="col-form-label" >{deck.description}</div>
                <GlobalControls deck={deck} initialMode={initialMode} setInitialMode={ setInitialMode }
                   setKanaMode={setKanaMode} setOnlyForgottenWords={setOnlyForgottenWords} />
                <table className={tableStyle}>
-                  <thead className="thead-dark">
+                  <thead className="">
                      <tr>
                         <th >Режим повторения</th> 
                         <th style={{ minWidth: '10em'}} >Слово</th> 

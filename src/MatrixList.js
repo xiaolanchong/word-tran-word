@@ -22,10 +22,10 @@ class MatrixList extends React.Component {
          </tr>
       );
       return (
-         <div className='container'>
+         <div className='container' data-bs-theme='dark'>
             <h1>Все списки для повторения</h1>
-            <table className="table table-nonfluid ml-1">
-               <thead className="thead-dark">
+            <table className="table table-nonfluid ms-1">
+               <thead>
                   <tr>
                      <th>Название</th>
                      <th>Описание</th>

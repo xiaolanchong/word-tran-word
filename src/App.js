@@ -26,6 +26,6 @@ const MainPage = () => {
   }
 }
 
-const App = () => <><NavBar/><MainPage /></>
+const App = () => <><NavBar/><MainPage data-bs-theme="dark" /></>
 
 export default App;
