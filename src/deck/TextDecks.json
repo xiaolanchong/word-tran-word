@@ -112,5 +112,12 @@
       "Description": "Слова из ChinesePod, уровень UpInt pt1",
       "Language": "zh-Hans",
       "FileName": "zh/zhpod_upint_1.txt"
+   },
+   {
+      "Id" : 3000,
+      "Name" : "Slovene 1",
+      "Description": "Slovene, 1st deck",
+      "Language": "sl",
+      "FileName": "sl/slovene1.txt"
    }
 ]
